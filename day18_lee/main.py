@@ -6,6 +6,7 @@
 import unittest
 from BeautifulReport import BeautifulReport
 
+
 if __name__ == '__main__':
     ts = unittest.TestLoader().discover('.')
     br = BeautifulReport(ts)
