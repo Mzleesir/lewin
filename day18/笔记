@@ -1,0 +1,16 @@
+测试用例数据 excel -> python对象
+ddt+unittest
+
+excel 数据类型   - 》  python数据类型
+数值    -   》         数值
+字符串   -》           字符串
+时间日期   -》         时间日期
+
+json模块
+
+json.loads    json_str - > python object
+
+json.dumps   python object -> json_str
+
+日志功能
+logging 模块

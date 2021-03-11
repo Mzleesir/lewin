@@ -1,0 +1,21 @@
+unittest 核心概念
+1. 测试脚手架       TestCase提供的 一系列的方法，它会在测试前，测试后执行
+            1. setUP 在每个单元测试函数开始前执行
+            2. tearDown 在每个测试函数结束后执行
+
+            3. setUpClass  在整个测试用例类开始执行前执行  是类方法，需要装饰器
+            4. tearDownClass 在整个测试用例类执行完毕之后执行  是类方法，需要装饰器
+2. 测试用例        一个独立的测试单元， unittest提供的一个基类 TestCase
+3. 测试套件         一个测试用例的列表 testsuite，归档需要一起执行的测试
+    1. 直接使用unittest.TestSuite 实例化，一个一个的添加   (不常用)
+    添加的时候 测试用例类(测试方法名)
+    2. 使用unittest.TestLoader 实例化，传入测试用例类名，需要导入测试用例类   （不常用）
+    3. 使用unittest.TestLoader().discover()方法来收集用例
+       测试用例模块名要符合test*.py的规则
+4. 测试运行器        执行测试用例并输出结果。
+    1. unitttest.TextTestRunner 实例化调用run方法，传入测试套件
+       runner(ts)
+    2. HTMLTestRunnner
+    3. beautifulreport
+
+    运行的顺序，收集顺序，规则 按照ascii码的顺序(模块名，类里的测试函数名)

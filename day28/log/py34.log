@@ -1,0 +1,2035 @@
+ERROR 2020-11-27 20:49:09,676 [test_register.py-->line:50]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 48, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:49:09,678 [test_register.py-->line:51]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 20:49:09,678 [test_register.py-->line:52]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:49:09,678 [test_register.py-->line:53]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:49:09,876 [test_register.py-->line:50]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 48, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:49:09,878 [test_register.py-->line:51]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 20:49:09,878 [test_register.py-->line:52]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:49:09,879 [test_register.py-->line:53]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:49:10,067 [test_register.py-->line:50]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 48, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:49:10,068 [test_register.py-->line:51]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 20:49:10,068 [test_register.py-->line:52]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:49:10,068 [test_register.py-->line:53]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:57:45,956 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:57:45,957 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 20:57:45,957 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:57:45,957 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:57:46,157 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:57:46,158 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 20:57:46,158 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:57:46,158 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:57:46,361 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:57:46,361 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 20:57:46,361 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:57:46,361 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:33:50,270 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:33:50,271 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:33:50,272 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:33:50,272 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:33:50,471 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:33:50,472 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:33:50,472 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:33:50,472 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:33:50,668 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:33:50,668 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:33:50,668 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:33:50,668 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:34:38,029 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:34:38,030 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:34:38,030 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:34:38,030 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:34:38,216 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:34:38,216 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:34:38,216 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:34:38,216 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:34:38,408 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:34:38,409 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:34:38,409 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:34:38,409 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:45:03,053 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:45:03,054 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:45:03,054 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:45:03,054 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:45:03,258 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:45:03,259 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:45:03,259 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:45:03,259 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:45:03,454 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:45:03,454 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:45:03,454 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:45:03,455 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:46:33,635 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:46:33,637 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:46:33,637 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:46:33,637 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:46:34,692 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:46:34,692 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:46:34,692 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:46:34,692 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:46:34,730 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:46:34,730 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:46:34,730 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:46:34,730 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-30 20:42:39,970 [test_register.py-->line:52]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day24\testcases\test_register.py", line 50, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-30 20:42:39,975 [test_register.py-->line:53]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-30 20:42:39,975 [test_register.py-->line:54]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-30 20:42:39,975 [test_register.py-->line:55]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-30 20:42:40,206 [test_register.py-->line:52]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day24\testcases\test_register.py", line 50, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-30 20:42:40,207 [test_register.py-->line:53]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-30 20:42:40,207 [test_register.py-->line:54]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-30 20:42:40,207 [test_register.py-->line:55]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-30 20:42:40,434 [test_register.py-->line:52]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day24\testcases\test_register.py", line 50, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-30 20:42:40,434 [test_register.py-->line:53]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-30 20:42:40,434 [test_register.py-->line:54]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-30 20:42:40,434 [test_register.py-->line:55]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-30 20:52:44,872 [test_register.py-->line:55]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day24\testcases\test_register.py", line 53, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-30 20:52:44,873 [test_register.py-->line:56]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-30 20:52:44,873 [test_register.py-->line:57]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-30 20:52:44,873 [test_register.py-->line:58]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-30 20:52:45,247 [test_register.py-->line:55]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day24\testcases\test_register.py", line 53, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-30 20:52:45,248 [test_register.py-->line:56]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-30 20:52:45,248 [test_register.py-->line:57]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-30 20:52:45,248 [test_register.py-->line:58]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-30 20:52:45,756 [test_register.py-->line:55]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day24\testcases\test_register.py", line 53, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-30 20:52:45,757 [test_register.py-->line:56]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-30 20:52:45,757 [test_register.py-->line:57]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-30 20:52:45,757 [test_register.py-->line:58]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-02 20:43:59,627 [test_register.py-->line:69]:注册成功-不带昵称和类型::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 66, in test_register
+    self.assertTrue(db.exist())
+TypeError: exist() missing 1 required positional argument: 'sql'
+WARNING 2020-12-02 20:43:59,628 [test_register.py-->line:70]:执行的sql是：SELECT COUNT(1) FROM `member` WHERE mobile_phone='15873061811' and `type`=1;
+ERROR 2020-12-02 20:43:59,866 [test_register.py-->line:56]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 54, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-02 20:43:59,868 [test_register.py-->line:57]:请求数据是: {'mobile_phone': '15873061812', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-12-02 20:43:59,868 [test_register.py-->line:58]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-02 20:43:59,868 [test_register.py-->line:59]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-02 20:44:00,112 [test_register.py-->line:56]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 54, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-02 20:44:00,112 [test_register.py-->line:57]:请求数据是: {'mobile_phone': '15873061813', 'pwd': '123456789', 'type': 1}
+WARNING 2020-12-02 20:44:00,112 [test_register.py-->line:58]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-02 20:44:00,113 [test_register.py-->line:59]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-02 20:49:48,081 [test_register.py-->line:56]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 54, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-02 20:49:48,083 [test_register.py-->line:57]:请求数据是: {'mobile_phone': '15873061821', 'pwd': '12345678'}
+WARNING 2020-12-02 20:49:48,083 [test_register.py-->line:58]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-02 20:49:48,083 [test_register.py-->line:59]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-02 20:49:48,325 [test_register.py-->line:56]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 54, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-02 20:49:48,327 [test_register.py-->line:57]:请求数据是: {'mobile_phone': '15873061822', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-12-02 20:49:48,327 [test_register.py-->line:58]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-02 20:49:48,327 [test_register.py-->line:59]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-02 20:49:49,568 [test_register.py-->line:56]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 54, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-02 20:49:49,569 [test_register.py-->line:57]:请求数据是: {'mobile_phone': '15873061823', 'pwd': '123456789', 'type': 1}
+WARNING 2020-12-02 20:49:49,569 [test_register.py-->line:58]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-02 20:49:49,569 [test_register.py-->line:59]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-02 22:26:17,020 [test_register.py-->line:77]:注册成功-不带昵称和类型::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-02 22:26:18,678 [test_register.py-->line:78]:执行的sql是：SELECT COUNT(1) FROM `member` WHERE mobile_phone='#phone#' and `type`=1;
+ERROR 2020-12-03 13:51:18,423 [test_register.py-->line:77]:注册成功-带昵称-类型为0::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-03 13:51:18,425 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873061901' and `type`=0 and reg_name="美丽可爱的小简";
+ERROR 2020-12-03 13:51:18,828 [test_register.py-->line:77]:注册成功-不带昵称-类型为1::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-03 13:51:18,829 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873061902' and `type`=1;
+ERROR 2020-12-03 13:52:50,784 [test_register.py-->line:77]:注册成功-带昵称-类型为0::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-03 13:52:50,785 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873061904' and `type`=0 and reg_name="美丽可爱的小简";
+ERROR 2020-12-03 13:52:51,182 [test_register.py-->line:77]:注册成功-不带昵称-类型为1::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day25\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-03 13:52:51,183 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873061905' and `type`=1;
+ERROR 2020-12-04 20:30:18,574 [test_register.py-->line:77]:注册成功-带昵称-类型为0::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-04 20:30:18,579 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873161804' and `type`=0 and reg_name="美丽可爱的小简";
+ERROR 2020-12-04 20:30:18,990 [test_register.py-->line:77]:注册成功-不带昵称-类型为1::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-04 20:30:18,991 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873161805' and `type`=1;
+ERROR 2020-12-04 20:33:10,632 [test_register.py-->line:64]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 62, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-04 20:33:10,633 [test_register.py-->line:65]:请求数据是: {'mobile_phone': '15873161803', 'pwd': '12345678'}
+WARNING 2020-12-04 20:33:10,633 [test_register.py-->line:66]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-04 20:33:10,633 [test_register.py-->line:67]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-04 20:33:10,875 [test_register.py-->line:64]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 62, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-04 20:33:10,875 [test_register.py-->line:65]:请求数据是: {'mobile_phone': '15873161804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-12-04 20:33:10,876 [test_register.py-->line:66]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-04 20:33:10,876 [test_register.py-->line:67]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-04 20:33:11,110 [test_register.py-->line:64]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 62, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-12-04 20:33:11,111 [test_register.py-->line:65]:请求数据是: {'mobile_phone': '15873161805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-12-04 20:33:11,111 [test_register.py-->line:66]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-04 20:33:11,111 [test_register.py-->line:67]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-12-04 20:34:28,932 [test_register.py-->line:77]:注册成功-带昵称-类型为0::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-04 20:34:28,933 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873161807' and `type`=0 and reg_name="美丽可爱的小简";
+ERROR 2020-12-04 20:34:29,317 [test_register.py-->line:77]:注册成功-不带昵称-类型为1::数据库校验失败
+Traceback (most recent call last):
+  File "D:\project\py34\day26\testcases\test_register.py", line 74, in test_register
+    self.assertTrue(db.exist(case['sql']))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+WARNING 2020-12-04 20:34:29,317 [test_register.py-->line:78]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15873161808' and `type`=1;
+ERROR 2020-12-07 20:06:48,742 [test_register.py-->line:49]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:48,745 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15332327930', 'pwd': '12345678'}
+WARNING 2020-12-07 20:06:48,745 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:06:48,746 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:48,896 [test_register.py-->line:49]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:48,896 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13037352144', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-12-07 20:06:48,897 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:06:48,897 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,098 [test_register.py-->line:49]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,098 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13697906863', 'pwd': '123456789', 'type': 1}
+WARNING 2020-12-07 20:06:49,098 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:06:49,098 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,152 [test_register.py-->line:49]:不输入手机号::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '手机号为空'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 1, 'msg': '手机号为空'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,153 [test_register.py-->line:50]:请求数据是: {'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:06:49,153 [test_register.py-->line:51]:期望结果是：{'code': 1, 'msg': '手机号为空'}
+WARNING 2020-12-07 20:06:49,153 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,199 [test_register.py-->line:49]:手机号长度10位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,200 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '1550000000', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:06:49,201 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:06:49,201 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,252 [test_register.py-->line:49]:手机号长度12位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,253 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '155000000001', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:06:49,254 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:06:49,254 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,306 [test_register.py-->line:49]:手机号含有非法字符::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,306 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '1550000000q', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:06:49,306 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:06:49,306 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,359 [test_register.py-->line:49]:已注册过的手机号::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '账号已存在'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '账号已存在'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,360 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15873061802', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:06:49,361 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '账号已存在'}
+WARNING 2020-12-07 20:06:49,362 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,400 [test_register.py-->line:49]:密码7位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '密码格式为8到16位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '密码格式为8到16位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,401 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15500056781', 'pwd': '1234567', 'type': 1}
+WARNING 2020-12-07 20:06:49,401 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '密码格式为8到16位'}
+WARNING 2020-12-07 20:06:49,401 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,452 [test_register.py-->line:49]:密码17位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '密码格式为8到16位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '密码格式为8到16位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,453 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15500000001', 'pwd': '12345678901234567', 'type': 1}
+WARNING 2020-12-07 20:06:49,453 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '密码格式为8到16位'}
+WARNING 2020-12-07 20:06:49,453 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,506 [test_register.py-->line:49]:不输入密码::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '密码为空'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 1, 'msg': '密码为空'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,506 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13300000001', 'type': 1}
+WARNING 2020-12-07 20:06:49,507 [test_register.py-->line:51]:期望结果是：{'code': 1, 'msg': '密码为空'}
+WARNING 2020-12-07 20:06:49,507 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,547 [test_register.py-->line:49]:昵称11位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '用户昵称长度超过10位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '用户昵称长度超过10位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,547 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13303007856', 'pwd': '12345678', 'type': 1, 'reg_name': '12345678909991'}
+WARNING 2020-12-07 20:06:49,547 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '用户昵称长度超过10位'}
+WARNING 2020-12-07 20:06:49,547 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:06:49,600 [test_register.py-->line:49]:类型输入非0，1内容::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '不支持的用户类型'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '不支持的用户类型'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:06:49,601 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13300003456', 'pwd': '12345678', 'type': 2}
+WARNING 2020-12-07 20:06:49,601 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '不支持的用户类型'}
+WARNING 2020-12-07 20:06:49,601 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:39,590 [test_register.py-->line:49]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:39,592 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '18751064776', 'pwd': '12345678'}
+WARNING 2020-12-07 20:13:39,592 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:13:39,593 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:39,773 [test_register.py-->line:49]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:39,774 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15744383778', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-12-07 20:13:39,774 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:13:39,774 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:39,953 [test_register.py-->line:49]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:39,954 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13342642934', 'pwd': '123456789', 'type': 1}
+WARNING 2020-12-07 20:13:39,954 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:13:39,954 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:39,993 [test_register.py-->line:49]:不输入手机号::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '手机号为空'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 1, 'msg': '手机号为空'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:39,993 [test_register.py-->line:50]:请求数据是: {'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:13:39,993 [test_register.py-->line:51]:期望结果是：{'code': 1, 'msg': '手机号为空'}
+WARNING 2020-12-07 20:13:39,993 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,049 [test_register.py-->line:49]:手机号长度10位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,050 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '1550000000', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:13:40,050 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:13:40,050 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,105 [test_register.py-->line:49]:手机号长度12位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,106 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '155000000001', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:13:40,106 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:13:40,106 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,158 [test_register.py-->line:49]:手机号含有非法字符::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,159 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '1550000000q', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:13:40,159 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:13:40,159 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,213 [test_register.py-->line:49]:已注册过的手机号::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '账号已存在'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '账号已存在'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,214 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15873061802', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:13:40,214 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '账号已存在'}
+WARNING 2020-12-07 20:13:40,214 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,254 [test_register.py-->line:49]:密码7位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '密码格式为8到16位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '密码格式为8到16位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,254 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15500056781', 'pwd': '1234567', 'type': 1}
+WARNING 2020-12-07 20:13:40,254 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '密码格式为8到16位'}
+WARNING 2020-12-07 20:13:40,254 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,296 [test_register.py-->line:49]:密码17位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '密码格式为8到16位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '密码格式为8到16位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,297 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15500000001', 'pwd': '12345678901234567', 'type': 1}
+WARNING 2020-12-07 20:13:40,297 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '密码格式为8到16位'}
+WARNING 2020-12-07 20:13:40,297 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,347 [test_register.py-->line:49]:不输入密码::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '密码为空'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 1, 'msg': '密码为空'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,347 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13300000001', 'type': 1}
+WARNING 2020-12-07 20:13:40,347 [test_register.py-->line:51]:期望结果是：{'code': 1, 'msg': '密码为空'}
+WARNING 2020-12-07 20:13:40,347 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,402 [test_register.py-->line:49]:昵称11位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '用户昵称长度超过10位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '用户昵称长度超过10位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,403 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13303007856', 'pwd': '12345678', 'type': 1, 'reg_name': '12345678909991'}
+WARNING 2020-12-07 20:13:40,403 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '用户昵称长度超过10位'}
+WARNING 2020-12-07 20:13:40,403 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:13:40,445 [test_register.py-->line:49]:类型输入非0，1内容::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '不支持的用户类型'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+- {'code': 2, 'msg': '不支持的用户类型'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+WARNING 2020-12-07 20:13:40,446 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13300003456', 'pwd': '12345678', 'type': 2}
+WARNING 2020-12-07 20:13:40,446 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '不支持的用户类型'}
+WARNING 2020-12-07 20:13:40,446 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/member/register1'}
+ERROR 2020-12-07 20:14:33,573 [test_register.py-->line:49]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:33,574 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15199703195', 'pwd': '12345678'}
+WARNING 2020-12-07 20:14:33,574 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:14:33,574 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:33,745 [test_register.py-->line:49]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:33,745 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13830930314', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-12-07 20:14:33,745 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:14:33,745 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:33,907 [test_register.py-->line:49]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 0, 'msg': 'OK'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:33,907 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15363316368', 'pwd': '123456789', 'type': 1}
+WARNING 2020-12-07 20:14:33,907 [test_register.py-->line:51]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 20:14:33,908 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:33,961 [test_register.py-->line:49]:不输入手机号::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '手机号为空'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 1, 'msg': '手机号为空'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:33,961 [test_register.py-->line:50]:请求数据是: {'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:14:33,962 [test_register.py-->line:51]:期望结果是：{'code': 1, 'msg': '手机号为空'}
+WARNING 2020-12-07 20:14:33,962 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,005 [test_register.py-->line:49]:手机号长度10位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,006 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '1550000000', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:14:34,006 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:14:34,006 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,049 [test_register.py-->line:49]:手机号长度12位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,050 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '155000000001', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:14:34,050 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:14:34,050 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,103 [test_register.py-->line:49]:手机号含有非法字符::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '无效的手机格式'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '无效的手机格式'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,103 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '1550000000q', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:14:34,103 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '无效的手机格式'}
+WARNING 2020-12-07 20:14:34,103 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,147 [test_register.py-->line:49]:已注册过的手机号::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '账号已存在'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '账号已存在'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,151 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15873061802', 'pwd': '12345678', 'type': 1}
+WARNING 2020-12-07 20:14:34,152 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '账号已存在'}
+WARNING 2020-12-07 20:14:34,152 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,201 [test_register.py-->line:49]:密码7位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '密码格式为8到16位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '密码格式为8到16位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,201 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15500056781', 'pwd': '1234567', 'type': 1}
+WARNING 2020-12-07 20:14:34,201 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '密码格式为8到16位'}
+WARNING 2020-12-07 20:14:34,201 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,240 [test_register.py-->line:49]:密码17位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '密码格式为8到16位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '密码格式为8到16位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,241 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '15500000001', 'pwd': '12345678901234567', 'type': 1}
+WARNING 2020-12-07 20:14:34,241 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '密码格式为8到16位'}
+WARNING 2020-12-07 20:14:34,241 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,298 [test_register.py-->line:49]:不输入密码::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '密码为空'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 1, 'msg': '密码为空'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,299 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13300000001', 'type': 1}
+WARNING 2020-12-07 20:14:34,299 [test_register.py-->line:51]:期望结果是：{'code': 1, 'msg': '密码为空'}
+WARNING 2020-12-07 20:14:34,299 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,352 [test_register.py-->line:49]:昵称11位::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '用户昵称长度超过10位'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '用户昵称长度超过10位'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,353 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13303007856', 'pwd': '12345678', 'type': 1, 'reg_name': '12345678909991'}
+WARNING 2020-12-07 20:14:34,353 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '用户昵称长度超过10位'}
+WARNING 2020-12-07 20:14:34,353 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 20:14:34,398 [test_register.py-->line:49]:类型输入非0，1内容::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_register.py", line 47, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '不支持的用户类型'} != {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+- {'code': 2, 'msg': '不支持的用户类型'}
++ {'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+WARNING 2020-12-07 20:14:34,398 [test_register.py-->line:50]:请求数据是: {'mobile_phone': '13300003456', 'pwd': '12345678', 'type': 2}
+WARNING 2020-12-07 20:14:34,398 [test_register.py-->line:51]:期望结果是：{'code': 2, 'msg': '不支持的用户类型'}
+WARNING 2020-12-07 20:14:34,398 [test_register.py-->line:52]:实际结果是：{'code': 1004, 'msg': 'No handler found for POST /futureloan/abc/register'}
+ERROR 2020-12-07 21:36:07,155 [fixture.py-->line:75]:用户充值失败
+ERROR 2020-12-07 21:36:07,156 [fixture.py-->line:76]:错误信息:{'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+ERROR 2020-12-07 21:46:32,375 [test_withdraw.py-->line:55]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-07 21:46:32,380 [test_withdraw.py-->line:56]:请求数据是: {'member_id': '1770217029', 'amount': 500001}
+WARNING 2020-12-07 21:46:32,380 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 21:46:32,381 [test_withdraw.py-->line:58]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-07 21:46:32,485 [test_withdraw.py-->line:55]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-07 21:46:32,486 [test_withdraw.py-->line:56]:请求数据是: {'member_id': '1770217029', 'amount': -1}
+WARNING 2020-12-07 21:46:32,486 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 21:46:32,486 [test_withdraw.py-->line:58]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-07 21:46:32,532 [test_withdraw.py-->line:55]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 21:46:32,533 [test_withdraw.py-->line:56]:请求数据是: {'member_id': '1770217029', 'amount': 0}
+WARNING 2020-12-07 21:46:32,533 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 21:46:32,533 [test_withdraw.py-->line:58]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-07 21:46:32,785 [test_withdraw.py-->line:55]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-07 21:46:32,786 [test_withdraw.py-->line:56]:请求数据是: {'member_id': 1770217029, 'amount': 0.1}
+WARNING 2020-12-07 21:46:32,786 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-07 21:46:32,786 [test_withdraw.py-->line:58]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-07 21:47:25,309 [test_withdraw.py-->line:55]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-07 21:47:25,311 [test_withdraw.py-->line:56]:请求数据是: {'member_id': '1770217033', 'amount': 500001}
+WARNING 2020-12-07 21:47:25,311 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 21:47:25,311 [test_withdraw.py-->line:58]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-07 21:47:25,394 [test_withdraw.py-->line:55]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-07 21:47:25,394 [test_withdraw.py-->line:56]:请求数据是: {'member_id': '1770217033', 'amount': -1}
+WARNING 2020-12-07 21:47:25,394 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 21:47:25,395 [test_withdraw.py-->line:58]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-07 21:47:25,456 [test_withdraw.py-->line:55]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 21:47:25,458 [test_withdraw.py-->line:56]:请求数据是: {'member_id': '1770217033', 'amount': 0}
+WARNING 2020-12-07 21:47:25,458 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 21:47:25,458 [test_withdraw.py-->line:58]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-07 21:47:25,683 [test_withdraw.py-->line:55]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day27\testcases\test_withdraw.py", line 53, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-07 21:47:25,684 [test_withdraw.py-->line:56]:请求数据是: {'member_id': 1770217033, 'amount': 0.1}
+WARNING 2020-12-07 21:47:25,684 [test_withdraw.py-->line:57]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-07 21:47:25,684 [test_withdraw.py-->line:58]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-07 22:08:53,768 [test_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-07 22:08:53,769 [test_withdraw.py-->line:62]:请求数据是: {'member_id': '1770217071', 'amount': 500001}
+WARNING 2020-12-07 22:08:53,769 [test_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 22:08:53,769 [test_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-07 22:08:53,867 [test_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-07 22:08:53,867 [test_withdraw.py-->line:62]:请求数据是: {'member_id': '1770217071', 'amount': -1}
+WARNING 2020-12-07 22:08:53,867 [test_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 22:08:53,868 [test_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-07 22:08:54,140 [test_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-07 22:08:54,141 [test_withdraw.py-->line:62]:请求数据是: {'member_id': '1770217071', 'amount': 0}
+WARNING 2020-12-07 22:08:54,141 [test_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-07 22:08:54,141 [test_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-07 22:08:54,665 [test_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day27/testcases/test_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-07 22:08:54,665 [test_withdraw.py-->line:62]:请求数据是: {'member_id': 1770217071, 'amount': 0.1}
+WARNING 2020-12-07 22:08:54,665 [test_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-07 22:08:54,665 [test_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:33:10,470 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 20:33:10,474 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770219307', 'amount': 888}
+WARNING 2020-12-09 20:33:10,474 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 20:33:10,474 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:33:10,593 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:33:10,594 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770219307, 'amount': 0}
+WARNING 2020-12-09 20:33:10,594 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:33:10,594 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:33:12,207 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 20:33:12,208 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219308', 'amount': 500001}
+WARNING 2020-12-09 20:33:12,208 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:33:12,209 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 20:33:12,315 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 20:33:12,316 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219308', 'amount': -1}
+WARNING 2020-12-09 20:33:12,316 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:33:12,316 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 20:33:12,382 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:33:12,382 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219308', 'amount': 0}
+WARNING 2020-12-09 20:33:12,382 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:33:12,382 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:33:12,621 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 20:33:12,621 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770219308, 'amount': 0.1}
+WARNING 2020-12-09 20:33:12,621 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 20:33:12,621 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:42:23,651 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 20:42:23,652 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770219330', 'amount': 888}
+WARNING 2020-12-09 20:42:23,652 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 20:42:23,652 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:42:23,747 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:42:23,748 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770219330, 'amount': 0}
+WARNING 2020-12-09 20:42:23,748 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:42:23,748 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:42:25,285 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 20:42:25,285 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219331', 'amount': 500001}
+WARNING 2020-12-09 20:42:25,285 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:42:25,286 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 20:42:25,371 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 20:42:25,373 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219331', 'amount': -1}
+WARNING 2020-12-09 20:42:25,373 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:42:25,373 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 20:42:25,437 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:42:25,438 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219331', 'amount': 0}
+WARNING 2020-12-09 20:42:25,438 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:42:25,438 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:42:25,687 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 20:42:25,687 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770219331, 'amount': 0.1}
+WARNING 2020-12-09 20:42:25,687 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 20:42:25,687 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:43:39,344 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 20:43:39,347 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770219338', 'amount': 888}
+WARNING 2020-12-09 20:43:39,347 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 20:43:39,347 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:43:39,458 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:43:39,459 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770219338, 'amount': 0}
+WARNING 2020-12-09 20:43:39,459 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:43:39,459 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:43:41,049 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 20:43:41,050 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219339', 'amount': 500001}
+WARNING 2020-12-09 20:43:41,050 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:43:41,050 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 20:43:41,155 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 20:43:41,156 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219339', 'amount': -1}
+WARNING 2020-12-09 20:43:41,156 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:43:41,156 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 20:43:41,217 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:43:41,218 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219339', 'amount': 0}
+WARNING 2020-12-09 20:43:41,218 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 20:43:41,218 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 20:43:41,500 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 20:43:41,500 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770219339, 'amount': 0.1}
+WARNING 2020-12-09 20:43:41,500 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 20:43:41,500 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 20:43:42,112 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,176 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,229 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,268 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,320 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,366 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,404 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,452 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,507 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,548 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+WARNING 2020-12-09 20:43:42,605 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNDAsImV4cCI6MTYwNzUxODEyMn0.obvJEwWt6HwsRgdedw00fsYqT-Uyg-mkI7nAmZZzQbZ-JNTn5hEHDNqMG8oZlmCQzWgmf0DXaPib8rkVs0cQOA
+ERROR 2020-12-09 21:21:22,974 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 21:21:22,975 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770219372', 'amount': 888}
+WARNING 2020-12-09 21:21:22,975 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 21:21:22,975 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 21:21:23,086 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 21:21:23,086 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770219372, 'amount': 0}
+WARNING 2020-12-09 21:21:23,086 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 21:21:23,086 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 21:21:24,725 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 21:21:24,726 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219373', 'amount': 500001}
+WARNING 2020-12-09 21:21:24,726 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 21:21:24,726 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 21:21:24,805 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-09 21:21:24,806 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219373', 'amount': -1}
+WARNING 2020-12-09 21:21:24,806 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 21:21:24,806 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+ERROR 2020-12-09 21:21:24,869 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 21:21:24,870 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770219373', 'amount': 0}
+WARNING 2020-12-09 21:21:24,870 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-09 21:21:24,870 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+ERROR 2020-12-09 21:21:25,120 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 21:21:25,120 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770219373, 'amount': 0.1}
+WARNING 2020-12-09 21:21:25,120 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-09 21:21:25,120 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 21:21:25,738 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:25,827 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:25,881 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:25,919 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:25,974 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:26,027 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:26,068 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:26,111 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:26,156 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:26,208 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+WARNING 2020-12-09 21:21:26,252 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMTkzNzQsImV4cCI6MTYwNzUyMDM4Nn0.k-hhVjxTwRwizlQRxP9vOn7xn2SGKGbF-OmuDdOnyrXDI5RV0KK77juyBChZl6sWeFIl-pN7f6dOZPPkd0zPFQ
+ERROR 2020-12-09 21:21:28,011 [test06_audit.py-->line:76]:项目id不是整数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test06_audit.py", line 74, in test_audit
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数值参数格式不正确'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数值参数格式不正确'}
+?          ^          ^^^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-09 21:21:28,012 [test06_audit.py-->line:77]:请求数据是: {'loan_id': '14011', 'approved_or_not': True}
+WARNING 2020-12-09 21:21:28,012 [test06_audit.py-->line:78]:期望结果是：{'code': 2, 'msg': '数值参数格式不正确'}
+WARNING 2020-12-09 21:21:28,012 [test06_audit.py-->line:79]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-09 21:21:28,012 [test06_audit.py-->line:80]:响应回的数据是：{'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

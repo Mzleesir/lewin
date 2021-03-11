@@ -1,0 +1,29 @@
+1. 需求分析
+2. 编写用例
+{'title': '注测成功','username': 'python34', 'password1': '123456', 'password2': '123456', 'expect': {"code": 1, "msg": "注册成功"}}
+{'title': '用户名为空','username': '', 'password1': '123456', 'password2': '123456', 'expect': {"code": 0, "msg": "所有参数不能为空"}}
+{'title': '密码为空','username': 'python35', 'password1': '', 'password2': '', 'expect': {"code": 0, "msg": "所有参数不能为空"}}
+{'title': '两次密码不一致','username': 'python35', 'password1': '123456', 'password2': '1234567', 'expect': {"code": 0, "msg": "两次密码不一致"}}
+{'title': '账户已存在','username': 'python34', 'password1': '123456', 'password2': '123456', 'expect': {"code": 0, "msg": "该账户已存在"}}
+{'title': '密码长度小于6位','username': 'python35', 'password1': '12345', 'password2': '12345', 'expect': {"code": 0, "msg": "账号和密码必须在6-18位之间"}}
+{'title': '密码长度大于18位','username': 'python35', 'password1': '1234567890123456789', 'password2': '1234567890123456789', 'expect': {"code": 0, "msg": "账号和密码必须在6-18位之间"}}
+
+3. 根据用例编写代码
+    - test_register.py测试用例类
+        写测试用例的
+        1. 模块文件名要以test开头
+        2. 测试用例类要继承unittest.TestCase类
+        3. 测试方法要以test开头
+    - main.py程序入口
+        收集测试，然后执行并输出报告
+        1. 实例化一个TestLoader().discover('.')  返回测试套件
+        2. 使用运行器，运行测试套件，并生成报告
+            1. unittest.TextTestRunner(肯定不用)
+            2. HtmlTestRunner
+                固定格式
+            3. BeautifulReport
+                固定用法
+4. 运行测试并输入报告
+
+
+补充：unittest的断言方法

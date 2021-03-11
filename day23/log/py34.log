@@ -1,0 +1,480 @@
+ERROR 2020-11-27 20:49:09,676 [test_register.py-->line:50]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 48, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:49:09,678 [test_register.py-->line:51]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 20:49:09,678 [test_register.py-->line:52]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:49:09,678 [test_register.py-->line:53]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:49:09,876 [test_register.py-->line:50]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 48, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:49:09,878 [test_register.py-->line:51]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 20:49:09,878 [test_register.py-->line:52]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:49:09,879 [test_register.py-->line:53]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:49:10,067 [test_register.py-->line:50]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 48, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:49:10,068 [test_register.py-->line:51]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 20:49:10,068 [test_register.py-->line:52]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:49:10,068 [test_register.py-->line:53]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:57:45,956 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:57:45,957 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 20:57:45,957 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:57:45,957 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:57:46,157 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:57:46,158 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 20:57:46,158 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:57:46,158 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 20:57:46,361 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 20:57:46,361 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 20:57:46,361 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 20:57:46,361 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:33:50,270 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:33:50,271 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:33:50,272 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:33:50,272 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:33:50,471 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:33:50,472 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:33:50,472 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:33:50,472 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:33:50,668 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:33:50,668 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:33:50,668 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:33:50,668 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:34:38,029 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:34:38,030 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:34:38,030 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:34:38,030 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:34:38,216 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:34:38,216 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:34:38,216 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:34:38,216 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:34:38,408 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:34:38,409 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:34:38,409 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:34:38,409 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:45:03,053 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:45:03,054 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:45:03,054 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:45:03,054 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:45:03,258 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:45:03,259 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:45:03,259 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:45:03,259 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:45:03,454 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:45:03,454 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:45:03,454 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:45:03,455 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:46:33,635 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:46:33,637 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2020-11-27 21:46:33,637 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:46:33,637 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:46:34,692 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:46:34,692 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2020-11-27 21:46:34,692 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:46:34,692 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2020-11-27 21:46:34,730 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day23\testcases\test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2020-11-27 21:46:34,730 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2020-11-27 21:46:34,730 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-11-27 21:46:34,730 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2021-03-02 21:50:22,513 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "/Users/lewin/pythonProject/柠檬班/day23/testcases/test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2021-03-02 21:50:22,516 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2021-03-02 21:50:22,516 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2021-03-02 21:50:22,516 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2021-03-02 21:50:22,648 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "/Users/lewin/pythonProject/柠檬班/day23/testcases/test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2021-03-02 21:50:22,648 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2021-03-02 21:50:22,649 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2021-03-02 21:50:22,649 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2021-03-02 21:50:22,795 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "/Users/lewin/pythonProject/柠檬班/day23/testcases/test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2021-03-02 21:50:22,795 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2021-03-02 21:50:22,796 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2021-03-02 21:50:22,796 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2021-03-04 09:15:40,994 [test_register.py-->line:51]:注册成功-不带昵称和类型::测试失败
+Traceback (most recent call last):
+  File "/Users/lewin/pythonProject/柠檬班/day23/testcases/test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2021-03-04 09:15:40,998 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061803', 'pwd': '12345678'}
+WARNING 2021-03-04 09:15:40,998 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2021-03-04 09:15:40,998 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2021-03-04 09:15:41,124 [test_register.py-->line:51]:注册成功-带昵称-类型为0::测试失败
+Traceback (most recent call last):
+  File "/Users/lewin/pythonProject/柠檬班/day23/testcases/test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2021-03-04 09:15:41,126 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061804', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+WARNING 2021-03-04 09:15:41,126 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2021-03-04 09:15:41,126 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}
+ERROR 2021-03-04 09:15:41,307 [test_register.py-->line:51]:注册成功-不带昵称-类型为1::测试失败
+Traceback (most recent call last):
+  File "/Users/lewin/pythonProject/柠檬班/day23/testcases/test_register.py", line 49, in test_register
+    self.assertEqual(expect_data, res_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 0, 'msg': 'OK'} != {'code': 2, 'msg': '账号已存在'}
+- {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
++ {'code': 2, 'msg': '账号已存在'}
+?          ^          ^^^^^
+
+WARNING 2021-03-04 09:15:41,308 [test_register.py-->line:52]:请求数据是: {'mobile_phone': '15873061805', 'pwd': '123456789', 'type': 1}
+WARNING 2021-03-04 09:15:41,308 [test_register.py-->line:53]:期望结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2021-03-04 09:15:41,308 [test_register.py-->line:54]:实际结果是：{'code': 2, 'msg': '账号已存在'}

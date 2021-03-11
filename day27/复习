@@ -1,0 +1,29 @@
+1. 梳理框架运行流程
+2. 纠正上节课的失误
+    1. sql语句逻辑错误
+    2. 校验手机号码存在的逻辑错误
+3. 补充内容
+    1. mysql事务之可重复读问题解决
+    A  200     -100
+    B  100     +100
+
+
+4. 登录接口测试步骤
+
+5. 抽象出测试用例基类
+    - 通用属性
+        - name   接口/测试功能的名字
+        - logger
+        - db
+        - auth_key
+        - settings
+    - 类方法
+        - 类前置/后置方法
+            - setUpClass   类前置
+            - tearDownClass 类后置
+            - load_cases
+    - 对象方法
+        - send_request
+            - 是否处理业务？
+        - get_unused_phone_num
+

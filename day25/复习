@@ -1,0 +1,26 @@
+1. 继续配置化
+    - 接口地址配置
+        - settings.py
+            - PROJECT_HOST
+            - INTERFACE
+        - excel文件
+            - 删掉固定url
+            - 添加interface字段，对应接口的key
+        - testcase文件
+            - 通过配置拼接url
+    - 配置鉴权方式
+        - 在settings.py中创建一个CUSTOM_HEADERS字典，key对应不同权限的请求头
+        - 在测试用例类中定义类变量指定不同的鉴权请求头key
+        - 在发送请求前动态获取对应的请求头信息
+2. 数据库校验
+    python操作mysql
+    第三方库-pymysql（纯python客户端）/MySQLdb 老python2/mysqlclient 有c库的依赖，速度会快一点
+    pip install pymysql
+
+    使用步骤：
+    1.创建连接
+    2. 创建游标
+    3. 执行sql语句
+    4. 获取结果
+    5. 关闭游标
+    6. 关闭连接

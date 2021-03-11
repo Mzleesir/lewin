@@ -1,0 +1,47 @@
+1. 测试用例编写
+
+
+2. 代码分层：
+- common: 公共模块(我们自己封装的工具代码)
+    - test_data_handler.py: 从excel用例文件中提取测试数据
+    - log_handler.py: 封装了一个日志器，用来记录日志，调试bug
+    - report_handler.py: 封装了一个生成测试报告的函数，可以输出不同风格的测试报告
+    - request_handler.py: 封装了一个发送请求的函数，根据不同测http方法名称发送不同的请求
+
+    完整的听完视频，还有不懂的过来问。
+    基础问题，语法，字典，列表的方法不懂，建议再往前看
+- libs：第三库(有可能有改动，也有可能是没有通过pip安装的)
+
+- testcases: 测试用例类
+    - 一个接口一个测试文件，测试py文件以test开头，test*.py
+    - 测试用例类一定要继承unittest.TestCase
+    - 测试方法一定要以test开头
+        - 1. 测试数据
+        - 2. 测试步骤
+        - 3. 断言
+
+- testdata：测试数据 根据不同的项目微调
+- reports: 报告目录
+- log: 日志目录
+- settings.py: 配置文件, 代码解耦
+- main.py: 项目入口程序
+    - 导入都会以当前入口程序作为相对路径
+
+3. 配置日志，以及使用日志
+    - os
+        - os.path.abspath
+        - os.path.dirname
+        - os.path.join
+
+4. 配置测试数据
+
+5. 封装测试报告方法
+    - datetime
+        - nw = datetime.now()
+        print(nw ,type(nw))
+        print(nw.strftime('%Y-%m-%d %H时%M分%S秒'))
+        import time
+        time.strftime()
+    - os
+        os.path.exists(report_dir)
+        os.path.makedirs

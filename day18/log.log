@@ -1,0 +1,17 @@
+2020-11-16 21:34:43,790-[日志功能简单实用.py-->line:14]-DEBUG:This is a debug log
+2020-11-16 21:34:43,790-[日志功能简单实用.py-->line:15]-INFO:This is a info log
+2020-11-16 21:34:43,791-[日志功能简单实用.py-->line:16]-WARNING:This is a warning log
+2020-11-16 21:34:43,791-[日志功能简单实用.py-->line:17]-ERROR:This is a error log
+2020-11-16 21:34:43,791-[日志功能简单实用.py-->line:18]-CRITICAL:This is a critical log
+2020-11-16 22:03:44,375-[test_register.py-->line:21]-INFO:============开始测试注册功能================
+2020-11-16 22:03:44,376-[test_register.py-->line:25]-INFO:============测试注册功能结束================
+2021-02-16 16:59:25,113-[日志功能简单实用.py-->line:14]-DEBUG:This is a debug log
+2021-02-16 16:59:25,114-[日志功能简单实用.py-->line:15]-INFO:This is a info log
+2021-02-16 16:59:25,115-[日志功能简单实用.py-->line:16]-WARNING:This is a warning log
+2021-02-16 16:59:25,116-[日志功能简单实用.py-->line:17]-ERROR:This is a error log
+2021-02-16 16:59:25,116-[日志功能简单实用.py-->line:18]-CRITICAL:This is a critical log
+2021-02-25 21:56:45,124-[日志功能简单实用.py-->line:14]-DEBUG:This is a debug log
+2021-02-25 21:56:45,125-[日志功能简单实用.py-->line:15]-INFO:This is a info log
+2021-02-25 21:56:45,125-[日志功能简单实用.py-->line:16]-WARNING:This is a warning log
+2021-02-25 21:56:45,125-[日志功能简单实用.py-->line:17]-ERROR:This is a error log
+2021-02-25 21:56:45,125-[日志功能简单实用.py-->line:18]-CRITICAL:This is a critical log

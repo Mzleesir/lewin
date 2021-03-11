@@ -1,0 +1,33 @@
+1. 测试用例编写
+
+
+2. 代码分层：
+- common: 公共模块
+    - test_data_handler.py: 从excel用例文件中提取数据
+
+- libs: 第三方模块
+- testcases: 测试用例类
+- testdata：测试数据
+- reports: 报告目录
+- log: 日志目录
+- settings.py: 配置文件
+- main.py: 项目入口程序
+
+3. 配置日志，以及使用日志
+    - os
+        - os.path.abspath
+        - os.path.dirname
+        - os.path.join
+
+4. 配置测试数据
+
+5. 封装测试报告方法
+    - datetime
+        - nw = datetime.now()
+        print(nw ,type(nw))
+        print(nw.strftime('%Y-%m-%d %H时%M分%S秒'))
+        import time
+        time.strftime()
+    - os
+        os.path.exists(report_dir)
+        os.path.makedirs

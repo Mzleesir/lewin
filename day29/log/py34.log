@@ -1,0 +1,1630 @@
+INFO 2020-12-10 15:44:46,274 [base_test_case.py-->line:24]:==========注册接口测试开始============
+INFO 2020-12-10 15:44:46,374 [test01_register.py-->line:29]:生成手机号码:15867303184
+INFO 2020-12-10 15:44:46,620 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15867303184' and `type`=1;
+INFO 2020-12-10 15:44:46,927 [test01_register.py-->line:29]:生成手机号码:15805757738
+INFO 2020-12-10 15:44:47,167 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15805757738' and `type`=0 and reg_name="美丽可爱的小简";
+INFO 2020-12-10 15:44:47,445 [test01_register.py-->line:29]:生成手机号码:15875599265
+INFO 2020-12-10 15:44:47,689 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15875599265' and `type`=1;
+INFO 2020-12-10 15:44:48,478 [base_test_case.py-->line:30]:==========注册接口测试结束============
+INFO 2020-12-10 15:44:48,478 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-10 15:44:48,793 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15851235658', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:44:48,794 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15851235658', 'pwd': '12345678'}
+INFO 2020-12-10 15:44:49,039 [test03_recharge.py-->line:42]:开始测试：充值成功-整数
+INFO 2020-12-10 15:44:49,056 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:44:49,120 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:44:49,150 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220159 and amount=888 and income_member_money=888.00
+INFO 2020-12-10 15:44:49,150 [test03_recharge.py-->line:42]:开始测试：充值成功-1位小数
+INFO 2020-12-10 15:44:49,167 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:44:49,232 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:44:49,261 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220159 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-10 15:44:49,262 [test03_recharge.py-->line:42]:开始测试：充值成功-2位小数
+INFO 2020-12-10 15:44:49,279 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:44:49,365 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:44:49,395 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220159 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-10 15:44:49,395 [test03_recharge.py-->line:42]:开始测试：充值成功-50万
+INFO 2020-12-10 15:44:49,413 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:44:49,492 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:44:49,521 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220159 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-10 15:44:49,522 [test03_recharge.py-->line:42]:开始测试：会员id位空
+INFO 2020-12-10 15:44:49,574 [test03_recharge.py-->line:42]:开始测试：id不是当前登陆的用户
+INFO 2020-12-10 15:44:49,611 [test03_recharge.py-->line:42]:开始测试：会员id为字符串
+ERROR 2020-12-10 15:44:49,675 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:44:49,676 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770220159', 'amount': 888}
+WARNING 2020-12-10 15:44:49,676 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-10 15:44:49,676 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:44:49,677 [test03_recharge.py-->line:42]:开始测试：会员id位小数
+INFO 2020-12-10 15:44:49,715 [test03_recharge.py-->line:42]:开始测试：充值金额为0
+ERROR 2020-12-10 15:44:49,785 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:44:49,785 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770220159, 'amount': 0}
+WARNING 2020-12-10 15:44:49,785 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:44:49,785 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:44:49,786 [test03_recharge.py-->line:42]:开始测试：充值金额为负数
+INFO 2020-12-10 15:44:49,836 [test03_recharge.py-->line:42]:开始测试：充值金额为空
+INFO 2020-12-10 15:44:49,875 [test03_recharge.py-->line:42]:开始测试：充值金额3位小数
+INFO 2020-12-10 15:44:49,930 [test03_recharge.py-->line:42]:开始测试：充值金额大于50万
+INFO 2020-12-10 15:44:49,970 [test03_recharge.py-->line:42]:开始测试：充值金额非数字
+INFO 2020-12-10 15:44:50,009 [base_test_case.py-->line:30]:==========充值接口测试结束============
+INFO 2020-12-10 15:44:50,010 [base_test_case.py-->line:24]:==========提现接口测试开始============
+INFO 2020-12-10 15:44:50,383 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15818796353', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:44:50,383 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15818796353', 'pwd': '12345678'}
+INFO 2020-12-10 15:44:50,629 [fixture.py-->line:69]:给用户1770220160充值500000
+INFO 2020-12-10 15:44:50,692 [fixture.py-->line:69]:给用户1770220160充值3000
+INFO 2020-12-10 15:44:50,744 [test04_withdraw.py-->line:41]:开始测试：提现成功-整数
+INFO 2020-12-10 15:44:50,762 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:50,848 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:50,879 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220160 and             amount=888 and pay_member_money=502112.00
+INFO 2020-12-10 15:44:50,880 [test04_withdraw.py-->line:41]:开始测试：提现成功-1位小数
+INFO 2020-12-10 15:44:50,896 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:50,967 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:50,998 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220160 and             amount=888.8 and pay_member_money=501223.20
+INFO 2020-12-10 15:44:50,998 [test04_withdraw.py-->line:41]:开始测试：提现成功-2位小数
+INFO 2020-12-10 15:44:51,015 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:51,078 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:51,109 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220160 and             amount=888.88 and pay_member_money=500334.32
+INFO 2020-12-10 15:44:51,109 [test04_withdraw.py-->line:41]:开始测试：提现成功50万
+INFO 2020-12-10 15:44:51,125 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:51,206 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220160
+INFO 2020-12-10 15:44:51,236 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220160 and             amount=500000 and pay_member_money=334.32
+INFO 2020-12-10 15:44:51,237 [test04_withdraw.py-->line:41]:开始测试：提现金额大于余额
+INFO 2020-12-10 15:44:51,289 [test04_withdraw.py-->line:41]:开始测试：提现金额大于50万
+ERROR 2020-12-10 15:44:51,340 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-10 15:44:51,341 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220160', 'amount': 500001}
+WARNING 2020-12-10 15:44:51,341 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:44:51,341 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-10 15:44:51,341 [test04_withdraw.py-->line:41]:开始测试：提现金额-3位小数
+INFO 2020-12-10 15:44:51,381 [test04_withdraw.py-->line:41]:开始测试：提现金额为负数
+ERROR 2020-12-10 15:44:51,446 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-10 15:44:51,446 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220160', 'amount': -1}
+WARNING 2020-12-10 15:44:51,446 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:44:51,446 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-10 15:44:51,447 [test04_withdraw.py-->line:41]:开始测试：提现金额为0
+ERROR 2020-12-10 15:44:51,491 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:44:51,491 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220160', 'amount': 0}
+WARNING 2020-12-10 15:44:51,491 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:44:51,492 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:44:51,492 [test04_withdraw.py-->line:41]:开始测试：提现金额非数字
+INFO 2020-12-10 15:44:51,542 [test04_withdraw.py-->line:41]:开始测试：提现金额为空
+INFO 2020-12-10 15:44:51,593 [test04_withdraw.py-->line:41]:开始测试：会员id为空
+INFO 2020-12-10 15:44:51,632 [test04_withdraw.py-->line:41]:开始测试：会员id不是当前登陆用户
+INFO 2020-12-10 15:44:51,679 [test04_withdraw.py-->line:41]:开始测试：会员id为数值
+ERROR 2020-12-10 15:44:51,745 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:44:51,746 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770220160, 'amount': 0.1}
+WARNING 2020-12-10 15:44:51,746 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-10 15:44:51,746 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:44:51,747 [base_test_case.py-->line:30]:==========提现接口测试结束============
+INFO 2020-12-10 15:44:51,748 [base_test_case.py-->line:24]:==========创建项目接口测试开始============
+INFO 2020-12-10 15:44:52,129 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15851676007', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:44:52,129 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15851676007', 'pwd': '12345678'}
+INFO 2020-12-10 15:44:52,373 [test05_add_loan.py-->line:40]:开始测试：加标成功
+WARNING 2020-12-10 15:44:52,374 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,450 [test05_add_loan.py-->line:73]:查询loan表中是否增加一个标：select id from loan where id=14319 and member_id=1770220161 and title="借钱实现财富自由"             and amount=2000 and loan_rate=12.0 and loan_term=3 and             loan_date_type=1 and bidding_days=5
+INFO 2020-12-10 15:44:52,450 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id为空
+WARNING 2020-12-10 15:44:52,450 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,504 [test05_add_loan.py-->line:40]:开始测试：加标失败—标题为空
+WARNING 2020-12-10 15:44:52,504 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,559 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为空
+WARNING 2020-12-10 15:44:52,559 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,597 [test05_add_loan.py-->line:40]:开始测试：加标失败—年利率为空
+WARNING 2020-12-10 15:44:52,597 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,648 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限为空
+WARNING 2020-12-10 15:44:52,648 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,686 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限类型为空
+WARNING 2020-12-10 15:44:52,686 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,723 [test05_add_loan.py-->line:40]:开始测试：加标失败—竞标天数为空
+WARNING 2020-12-10 15:44:52,724 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,775 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id不是当前登录用户
+WARNING 2020-12-10 15:44:52,776 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,818 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为负数
+WARNING 2020-12-10 15:44:52,818 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,867 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为小数
+WARNING 2020-12-10 15:44:52,867 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxNjEsImV4cCI6MTYwNzU4NjU5NH0.atrNAlKt8u1oDNrFnDqg89eSsts1GaxkcP6geofZm_DuYF_2GVR0YpQRxf5A3ynHZs3i44zkbvfuNPJtvCtrZg
+INFO 2020-12-10 15:44:52,914 [base_test_case.py-->line:30]:==========创建项目接口测试结束============
+INFO 2020-12-10 15:44:52,914 [base_test_case.py-->line:24]:==========审核项目接口测试开始============
+INFO 2020-12-10 15:44:53,297 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15829077992', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:44:53,297 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15829077992', 'pwd': '12345678'}
+INFO 2020-12-10 15:44:53,911 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15851657189', 'pwd': '12345678', 'type': 0}
+INFO 2020-12-10 15:44:53,912 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15851657189', 'pwd': '12345678'}
+INFO 2020-12-10 15:44:54,165 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,213 [test06_audit.py-->line:57]:开始测试：审核成功-通过
+INFO 2020-12-10 15:44:54,287 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=14320 and status=2
+INFO 2020-12-10 15:44:54,287 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,331 [test06_audit.py-->line:57]:开始测试：审核成功-不通过
+INFO 2020-12-10 15:44:54,406 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=14321 and status=5
+INFO 2020-12-10 15:44:54,407 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,455 [test06_audit.py-->line:57]:开始测试：项目id为空
+INFO 2020-12-10 15:44:54,510 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,568 [test06_audit.py-->line:57]:开始测试：项目id不是整数
+ERROR 2020-12-10 15:44:54,611 [test06_audit.py-->line:76]:项目id不是整数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test06_audit.py", line 74, in test_audit
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数值参数格式不正确'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数值参数格式不正确'}
+?          ^          ^^^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:44:54,612 [test06_audit.py-->line:77]:请求数据是: {'loan_id': '14323', 'approved_or_not': True}
+WARNING 2020-12-10 15:44:54,612 [test06_audit.py-->line:78]:期望结果是：{'code': 2, 'msg': '数值参数格式不正确'}
+WARNING 2020-12-10 15:44:54,612 [test06_audit.py-->line:79]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:44:54,612 [test06_audit.py-->line:80]:响应回的数据是：{'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-10 15:44:54,612 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,659 [test06_audit.py-->line:57]:开始测试：不存在的项目id
+INFO 2020-12-10 15:44:54,712 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,757 [test06_audit.py-->line:57]:开始测试：审核状态不是布尔值
+INFO 2020-12-10 15:44:54,808 [fixture.py-->line:87]:用户1770220162加标借钱5000
+INFO 2020-12-10 15:44:54,852 [test06_audit.py-->line:57]:开始测试：审核状态不存在
+INFO 2020-12-10 15:44:54,904 [base_test_case.py-->line:30]:==========审核项目接口测试结束============
+INFO 2020-12-10 15:44:54,904 [base_test_case.py-->line:24]:==========投资接口测试开始============
+INFO 2020-12-10 15:44:55,451 [test07_invest.py-->line:33]:开始测试：前置条件-注册普通用户
+INFO 2020-12-10 15:44:55,706 [test07_invest.py-->line:33]:开始测试：前置条件-登陆普通用户
+INFO 2020-12-10 15:44:55,951 [test07_invest.py-->line:33]:开始测试：前置条件-创建项目
+INFO 2020-12-10 15:44:56,007 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户1
+INFO 2020-12-10 15:44:56,251 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户1
+INFO 2020-12-10 15:44:56,504 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户1充值
+INFO 2020-12-10 15:44:56,553 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户2
+INFO 2020-12-10 15:44:56,794 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户2
+INFO 2020-12-10 15:44:57,037 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户2充值
+INFO 2020-12-10 15:44:57,105 [test07_invest.py-->line:33]:开始测试：前置条件-注册管理员用户
+INFO 2020-12-10 15:44:57,354 [test07_invest.py-->line:33]:开始测试：前置条件-登陆管理员用户
+INFO 2020-12-10 15:44:57,589 [test07_invest.py-->line:33]:开始测试：投资项目不是竞标中状态
+INFO 2020-12-10 15:44:57,644 [test07_invest.py-->line:33]:开始测试：前置条件-审核项目
+INFO 2020-12-10 15:44:57,686 [test07_invest.py-->line:33]:开始测试：用户id为空
+INFO 2020-12-10 15:44:57,721 [test07_invest.py-->line:33]:开始测试：投资金额为空
+INFO 2020-12-10 15:44:57,773 [test07_invest.py-->line:33]:开始测试：投资金额为不能被100整除的数
+INFO 2020-12-10 15:44:57,825 [test07_invest.py-->line:33]:开始测试：投资成功
+INFO 2020-12-10 15:44:57,842 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770220165
+INFO 2020-12-10 15:44:57,927 [test07_invest.py-->line:80]:查询投资后余额：select leave_amount from member where id=1770220165
+INFO 2020-12-10 15:44:57,928 [test07_invest.py-->line:92]:查询投资记录是否生成：select id from invest where member_id=1770220165 and loan_id=14327 and amount=5000                         and is_valid=1
+INFO 2020-12-10 15:44:57,976 [test07_invest.py-->line:105]:查询流水记录是否生成:select id from financelog where pay_member_id=1770220165 and amount=5000 and             pay_member_money=0.00 and status=1
+INFO 2020-12-10 15:44:58,016 [test07_invest.py-->line:33]:开始测试：投资金额大于项目剩余可投金额
+INFO 2020-12-10 15:44:58,062 [test07_invest.py-->line:33]:开始测试：投资成功并满标
+INFO 2020-12-10 15:44:58,079 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770220166
+INFO 2020-12-10 15:44:58,176 [test07_invest.py-->line:80]:查询投资后余额：select leave_amount from member where id=1770220166
+ERROR 2020-12-10 15:44:58,176 [test07_invest.py-->line:86]:校验用户投资余额失败: 投资前余额:5100.00,投资额：5000,投资后余额:0.00
+INFO 2020-12-10 15:44:58,177 [test07_invest.py-->line:33]:开始测试：投资金额大于可用余额
+ERROR 2020-12-10 15:44:58,232 [test07_invest.py-->line:63]:投资金额大于可用余额::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test07_invest.py", line 61, in test_invest
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额不足'} != {'code': 2, 'msg': '该项目不在竞标中状态'}
+- {'code': 2, 'msg': '余额不足'}
+?                     ^^ ^
+
++ {'code': 2, 'msg': '该项目不在竞标中状态'}
+?                     ^^^ ^^^^^^
+
+WARNING 2020-12-10 15:44:58,233 [test07_invest.py-->line:64]:请求数据是: {'member_id': 1770220165, 'loan_id': 14327, 'amount': 5100}
+WARNING 2020-12-10 15:44:58,233 [test07_invest.py-->line:65]:期望结果是：{'code': 2, 'msg': '余额不足'}
+WARNING 2020-12-10 15:44:58,233 [test07_invest.py-->line:66]:实际结果是：{'code': 2, 'msg': '该项目不在竞标中状态'}
+WARNING 2020-12-10 15:44:58,233 [test07_invest.py-->line:67]:响应回的数据是：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-10 15:44:58,233 [base_test_case.py-->line:30]:==========投资接口测试结束============
+INFO 2020-12-10 15:49:27,522 [base_test_case.py-->line:24]:==========注册接口测试开始============
+INFO 2020-12-10 15:49:27,622 [test01_register.py-->line:29]:生成手机号码:15835244823
+INFO 2020-12-10 15:49:27,867 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15835244823' and `type`=1;
+INFO 2020-12-10 15:49:28,142 [test01_register.py-->line:29]:生成手机号码:15819270066
+INFO 2020-12-10 15:49:28,386 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15819270066' and `type`=0 and reg_name="美丽可爱的小简";
+INFO 2020-12-10 15:49:28,659 [test01_register.py-->line:29]:生成手机号码:15879806212
+INFO 2020-12-10 15:49:28,902 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15879806212' and `type`=1;
+INFO 2020-12-10 15:49:29,685 [base_test_case.py-->line:30]:==========注册接口测试结束============
+INFO 2020-12-10 15:49:29,686 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-10 15:49:30,047 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15853053968', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:49:30,047 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15853053968', 'pwd': '12345678'}
+INFO 2020-12-10 15:49:30,281 [test03_recharge.py-->line:42]:开始测试：充值成功-整数
+INFO 2020-12-10 15:49:30,298 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:49:30,365 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:49:30,399 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220181 and amount=888 and income_member_money=888.00
+INFO 2020-12-10 15:49:30,399 [test03_recharge.py-->line:42]:开始测试：充值成功-1位小数
+INFO 2020-12-10 15:49:30,416 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:49:30,485 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:49:30,516 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220181 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-10 15:49:30,516 [test03_recharge.py-->line:42]:开始测试：充值成功-2位小数
+INFO 2020-12-10 15:49:30,533 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:49:30,599 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:49:30,630 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220181 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-10 15:49:30,630 [test03_recharge.py-->line:42]:开始测试：充值成功-50万
+INFO 2020-12-10 15:49:30,648 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:49:30,713 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:49:30,744 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220181 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-10 15:49:30,744 [test03_recharge.py-->line:42]:开始测试：会员id位空
+INFO 2020-12-10 15:49:30,786 [test03_recharge.py-->line:42]:开始测试：id不是当前登陆的用户
+INFO 2020-12-10 15:49:30,828 [test03_recharge.py-->line:42]:开始测试：会员id为字符串
+ERROR 2020-12-10 15:49:30,890 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:49:30,892 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770220181', 'amount': 888}
+WARNING 2020-12-10 15:49:30,892 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-10 15:49:30,892 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:49:30,894 [test03_recharge.py-->line:42]:开始测试：会员id位小数
+INFO 2020-12-10 15:49:30,934 [test03_recharge.py-->line:42]:开始测试：充值金额为0
+ERROR 2020-12-10 15:49:30,982 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:49:30,983 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770220181, 'amount': 0}
+WARNING 2020-12-10 15:49:30,983 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:49:30,983 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:49:30,983 [test03_recharge.py-->line:42]:开始测试：充值金额为负数
+INFO 2020-12-10 15:49:31,036 [test03_recharge.py-->line:42]:开始测试：充值金额为空
+INFO 2020-12-10 15:49:31,089 [test03_recharge.py-->line:42]:开始测试：充值金额3位小数
+INFO 2020-12-10 15:49:31,126 [test03_recharge.py-->line:42]:开始测试：充值金额大于50万
+INFO 2020-12-10 15:49:31,165 [test03_recharge.py-->line:42]:开始测试：充值金额非数字
+INFO 2020-12-10 15:49:31,211 [base_test_case.py-->line:30]:==========充值接口测试结束============
+INFO 2020-12-10 15:49:31,211 [base_test_case.py-->line:24]:==========提现接口测试开始============
+INFO 2020-12-10 15:49:31,593 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15803767007', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:49:31,593 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15803767007', 'pwd': '12345678'}
+INFO 2020-12-10 15:49:31,837 [fixture.py-->line:69]:给用户1770220182充值500000
+INFO 2020-12-10 15:49:31,903 [fixture.py-->line:69]:给用户1770220182充值3000
+INFO 2020-12-10 15:49:31,965 [test04_withdraw.py-->line:41]:开始测试：提现成功-整数
+INFO 2020-12-10 15:49:31,982 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,063 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,095 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220182 and             amount=888 and pay_member_money=502112.00
+INFO 2020-12-10 15:49:32,095 [test04_withdraw.py-->line:41]:开始测试：提现成功-1位小数
+INFO 2020-12-10 15:49:32,112 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,179 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,210 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220182 and             amount=888.8 and pay_member_money=501223.20
+INFO 2020-12-10 15:49:32,210 [test04_withdraw.py-->line:41]:开始测试：提现成功-2位小数
+INFO 2020-12-10 15:49:32,227 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,294 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,324 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220182 and             amount=888.88 and pay_member_money=500334.32
+INFO 2020-12-10 15:49:32,325 [test04_withdraw.py-->line:41]:开始测试：提现成功50万
+INFO 2020-12-10 15:49:32,343 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,423 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220182
+INFO 2020-12-10 15:49:32,453 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220182 and             amount=500000 and pay_member_money=334.32
+INFO 2020-12-10 15:49:32,453 [test04_withdraw.py-->line:41]:开始测试：提现金额大于余额
+INFO 2020-12-10 15:49:32,494 [test04_withdraw.py-->line:41]:开始测试：提现金额大于50万
+ERROR 2020-12-10 15:49:32,547 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-10 15:49:32,548 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220182', 'amount': 500001}
+WARNING 2020-12-10 15:49:32,548 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:49:32,548 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-10 15:49:32,549 [test04_withdraw.py-->line:41]:开始测试：提现金额-3位小数
+INFO 2020-12-10 15:49:32,605 [test04_withdraw.py-->line:41]:开始测试：提现金额为负数
+ERROR 2020-12-10 15:49:32,663 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-10 15:49:32,664 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220182', 'amount': -1}
+WARNING 2020-12-10 15:49:32,664 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:49:32,664 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-10 15:49:32,664 [test04_withdraw.py-->line:41]:开始测试：提现金额为0
+ERROR 2020-12-10 15:49:32,725 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:49:32,725 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220182', 'amount': 0}
+WARNING 2020-12-10 15:49:32,725 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:49:32,725 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:49:32,726 [test04_withdraw.py-->line:41]:开始测试：提现金额非数字
+INFO 2020-12-10 15:49:32,778 [test04_withdraw.py-->line:41]:开始测试：提现金额为空
+INFO 2020-12-10 15:49:32,832 [test04_withdraw.py-->line:41]:开始测试：会员id为空
+INFO 2020-12-10 15:49:32,884 [test04_withdraw.py-->line:41]:开始测试：会员id不是当前登陆用户
+INFO 2020-12-10 15:49:32,937 [test04_withdraw.py-->line:41]:开始测试：会员id为数值
+ERROR 2020-12-10 15:49:32,991 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:49:32,992 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770220182, 'amount': 0.1}
+WARNING 2020-12-10 15:49:32,992 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-10 15:49:32,992 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:49:32,993 [base_test_case.py-->line:30]:==========提现接口测试结束============
+INFO 2020-12-10 15:49:32,993 [base_test_case.py-->line:24]:==========创建项目接口测试开始============
+INFO 2020-12-10 15:49:33,376 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15815400412', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:49:33,377 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15815400412', 'pwd': '12345678'}
+INFO 2020-12-10 15:49:33,606 [test05_add_loan.py-->line:40]:开始测试：加标成功
+WARNING 2020-12-10 15:49:33,606 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,680 [test05_add_loan.py-->line:73]:查询loan表中是否增加一个标：select id from loan where id=14331 and member_id=1770220183 and title="借钱实现财富自由"             and amount=2000 and loan_rate=12.0 and loan_term=3 and             loan_date_type=1 and bidding_days=5
+INFO 2020-12-10 15:49:33,681 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id为空
+WARNING 2020-12-10 15:49:33,681 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,718 [test05_add_loan.py-->line:40]:开始测试：加标失败—标题为空
+WARNING 2020-12-10 15:49:33,718 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,756 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为空
+WARNING 2020-12-10 15:49:33,756 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,808 [test05_add_loan.py-->line:40]:开始测试：加标失败—年利率为空
+WARNING 2020-12-10 15:49:33,808 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,860 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限为空
+WARNING 2020-12-10 15:49:33,860 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,900 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限类型为空
+WARNING 2020-12-10 15:49:33,900 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,951 [test05_add_loan.py-->line:40]:开始测试：加标失败—竞标天数为空
+WARNING 2020-12-10 15:49:33,951 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:33,994 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id不是当前登录用户
+WARNING 2020-12-10 15:49:33,994 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:34,050 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为负数
+WARNING 2020-12-10 15:49:34,050 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:34,092 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为小数
+WARNING 2020-12-10 15:49:34,092 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAxODMsImV4cCI6MTYwNzU4Njg3NX0.wOgWdI4iOpi2GuBIaMzTrRIdOg4Fa72bPlTYyWPT12oGNp1aoNvhE9HX3mM2_3k3yqKMDOjxdbhgAYtwJfAanA
+INFO 2020-12-10 15:49:34,133 [base_test_case.py-->line:30]:==========创建项目接口测试结束============
+INFO 2020-12-10 15:49:34,133 [base_test_case.py-->line:24]:==========审核项目接口测试开始============
+INFO 2020-12-10 15:49:34,516 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15812731429', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:49:34,516 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15812731429', 'pwd': '12345678'}
+INFO 2020-12-10 15:49:35,138 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15847467594', 'pwd': '12345678', 'type': 0}
+INFO 2020-12-10 15:49:35,138 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15847467594', 'pwd': '12345678'}
+INFO 2020-12-10 15:49:35,380 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:35,442 [test06_audit.py-->line:57]:开始测试：审核成功-通过
+INFO 2020-12-10 15:49:35,519 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=14332 and status=2
+INFO 2020-12-10 15:49:35,519 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:35,566 [test06_audit.py-->line:57]:开始测试：审核成功-不通过
+INFO 2020-12-10 15:49:35,631 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=14333 and status=5
+INFO 2020-12-10 15:49:35,631 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:35,690 [test06_audit.py-->line:57]:开始测试：项目id为空
+INFO 2020-12-10 15:49:35,742 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:35,800 [test06_audit.py-->line:57]:开始测试：项目id不是整数
+ERROR 2020-12-10 15:49:35,845 [test06_audit.py-->line:76]:项目id不是整数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test06_audit.py", line 74, in test_audit
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数值参数格式不正确'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数值参数格式不正确'}
+?          ^          ^^^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:49:35,846 [test06_audit.py-->line:77]:请求数据是: {'loan_id': '14335', 'approved_or_not': True}
+WARNING 2020-12-10 15:49:35,846 [test06_audit.py-->line:78]:期望结果是：{'code': 2, 'msg': '数值参数格式不正确'}
+WARNING 2020-12-10 15:49:35,846 [test06_audit.py-->line:79]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:49:35,846 [test06_audit.py-->line:80]:响应回的数据是：{'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-10 15:49:35,846 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:35,894 [test06_audit.py-->line:57]:开始测试：不存在的项目id
+INFO 2020-12-10 15:49:35,940 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:35,986 [test06_audit.py-->line:57]:开始测试：审核状态不是布尔值
+INFO 2020-12-10 15:49:36,043 [fixture.py-->line:87]:用户1770220184加标借钱5000
+INFO 2020-12-10 15:49:36,089 [test06_audit.py-->line:57]:开始测试：审核状态不存在
+INFO 2020-12-10 15:49:36,143 [base_test_case.py-->line:30]:==========审核项目接口测试结束============
+INFO 2020-12-10 15:49:36,143 [base_test_case.py-->line:24]:==========投资接口测试开始============
+INFO 2020-12-10 15:49:36,663 [test07_invest.py-->line:33]:开始测试：前置条件-注册普通用户
+INFO 2020-12-10 15:49:36,898 [test07_invest.py-->line:33]:开始测试：前置条件-登陆普通用户
+INFO 2020-12-10 15:49:37,142 [test07_invest.py-->line:33]:开始测试：前置条件-创建项目
+INFO 2020-12-10 15:49:37,185 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户1
+INFO 2020-12-10 15:49:37,416 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户1
+INFO 2020-12-10 15:49:37,645 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户1充值
+INFO 2020-12-10 15:49:37,706 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户2
+INFO 2020-12-10 15:49:38,001 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户2
+INFO 2020-12-10 15:49:38,284 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户2充值
+INFO 2020-12-10 15:49:38,348 [test07_invest.py-->line:33]:开始测试：前置条件-注册管理员用户
+INFO 2020-12-10 15:49:38,523 [test07_invest.py-->line:33]:开始测试：前置条件-登陆管理员用户
+INFO 2020-12-10 15:49:38,694 [test07_invest.py-->line:33]:开始测试：投资项目不是竞标中状态
+INFO 2020-12-10 15:49:38,736 [test07_invest.py-->line:33]:开始测试：前置条件-审核项目
+INFO 2020-12-10 15:49:38,792 [test07_invest.py-->line:33]:开始测试：用户id为空
+INFO 2020-12-10 15:49:38,847 [test07_invest.py-->line:33]:开始测试：投资金额为空
+INFO 2020-12-10 15:49:38,905 [test07_invest.py-->line:33]:开始测试：投资金额为不能被100整除的数
+INFO 2020-12-10 15:49:38,961 [test07_invest.py-->line:33]:开始测试：投资成功
+INFO 2020-12-10 15:49:38,978 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770220187
+INFO 2020-12-10 15:49:39,064 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770220187
+INFO 2020-12-10 15:49:39,065 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770220187 and loan_id=14339 and amount=5000                         and is_valid=1
+INFO 2020-12-10 15:49:39,113 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770220187 and amount=5000 and             pay_member_money=0.00 and status=1
+INFO 2020-12-10 15:49:39,150 [test07_invest.py-->line:33]:开始测试：投资金额大于项目剩余可投金额
+INFO 2020-12-10 15:49:39,196 [test07_invest.py-->line:33]:开始测试：投资成功并满标
+INFO 2020-12-10 15:49:39,213 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770220188
+INFO 2020-12-10 15:49:39,298 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770220188
+INFO 2020-12-10 15:49:39,298 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770220188 and loan_id=14339 and amount=5000                         and is_valid=1
+INFO 2020-12-10 15:49:39,348 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770220188 and amount=5000 and             pay_member_money=100.00 and status=1
+INFO 2020-12-10 15:49:39,384 [test07_invest.py-->line:116]:满标了
+INFO 2020-12-10 15:49:39,404 [test07_invest.py-->line:33]:开始测试：投资金额大于可用余额
+ERROR 2020-12-10 15:49:39,461 [test07_invest.py-->line:63]:投资金额大于可用余额::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test07_invest.py", line 61, in test_invest
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额不足'} != {'code': 2, 'msg': '该项目不在竞标中状态'}
+- {'code': 2, 'msg': '余额不足'}
+?                     ^^ ^
+
++ {'code': 2, 'msg': '该项目不在竞标中状态'}
+?                     ^^^ ^^^^^^
+
+WARNING 2020-12-10 15:49:39,461 [test07_invest.py-->line:64]:请求数据是: {'member_id': 1770220187, 'loan_id': 14339, 'amount': 5100}
+WARNING 2020-12-10 15:49:39,461 [test07_invest.py-->line:65]:期望结果是：{'code': 2, 'msg': '余额不足'}
+WARNING 2020-12-10 15:49:39,462 [test07_invest.py-->line:66]:实际结果是：{'code': 2, 'msg': '该项目不在竞标中状态'}
+WARNING 2020-12-10 15:49:39,462 [test07_invest.py-->line:67]:响应回的数据是：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-10 15:49:39,462 [base_test_case.py-->line:30]:==========投资接口测试结束============
+INFO 2020-12-10 15:51:28,512 [base_test_case.py-->line:24]:==========注册接口测试开始============
+INFO 2020-12-10 15:51:29,172 [test01_register.py-->line:29]:生成手机号码:15846795904
+INFO 2020-12-10 15:51:30,324 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15846795904' and `type`=1;
+INFO 2020-12-10 15:51:31,843 [test01_register.py-->line:29]:生成手机号码:15844321530
+INFO 2020-12-10 15:51:33,192 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15844321530' and `type`=0 and reg_name="美丽可爱的小简";
+INFO 2020-12-10 15:51:34,695 [test01_register.py-->line:29]:生成手机号码:15896602040
+INFO 2020-12-10 15:51:35,800 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15896602040' and `type`=1;
+INFO 2020-12-10 15:51:38,167 [base_test_case.py-->line:30]:==========注册接口测试结束============
+INFO 2020-12-10 15:51:38,167 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-10 15:51:39,937 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15870571904', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:51:39,937 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15870571904', 'pwd': '12345678'}
+INFO 2020-12-10 15:51:41,102 [test03_recharge.py-->line:42]:开始测试：充值成功-整数
+INFO 2020-12-10 15:51:41,118 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:51:41,198 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:51:41,252 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220198 and amount=888 and income_member_money=888.00
+INFO 2020-12-10 15:51:41,252 [test03_recharge.py-->line:42]:开始测试：充值成功-1位小数
+INFO 2020-12-10 15:51:41,272 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:51:41,352 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:51:41,423 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220198 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-10 15:51:41,423 [test03_recharge.py-->line:42]:开始测试：充值成功-2位小数
+INFO 2020-12-10 15:51:41,441 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:51:41,506 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:51:41,581 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220198 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-10 15:51:41,582 [test03_recharge.py-->line:42]:开始测试：充值成功-50万
+INFO 2020-12-10 15:51:41,599 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-10 15:51:41,687 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-10 15:51:41,751 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770220198 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-10 15:51:41,751 [test03_recharge.py-->line:42]:开始测试：会员id位空
+INFO 2020-12-10 15:51:41,792 [test03_recharge.py-->line:42]:开始测试：id不是当前登陆的用户
+INFO 2020-12-10 15:51:41,826 [test03_recharge.py-->line:42]:开始测试：会员id为字符串
+ERROR 2020-12-10 15:51:41,890 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:51:41,891 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770220198', 'amount': 888}
+WARNING 2020-12-10 15:51:41,891 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-10 15:51:41,891 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:51:41,891 [test03_recharge.py-->line:42]:开始测试：会员id位小数
+INFO 2020-12-10 15:51:41,943 [test03_recharge.py-->line:42]:开始测试：充值金额为0
+ERROR 2020-12-10 15:51:42,004 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:51:42,005 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770220198, 'amount': 0}
+WARNING 2020-12-10 15:51:42,005 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:51:42,005 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:51:42,005 [test03_recharge.py-->line:42]:开始测试：充值金额为负数
+INFO 2020-12-10 15:51:42,048 [test03_recharge.py-->line:42]:开始测试：充值金额为空
+INFO 2020-12-10 15:51:42,098 [test03_recharge.py-->line:42]:开始测试：充值金额3位小数
+INFO 2020-12-10 15:51:42,137 [test03_recharge.py-->line:42]:开始测试：充值金额大于50万
+INFO 2020-12-10 15:51:42,174 [test03_recharge.py-->line:42]:开始测试：充值金额非数字
+INFO 2020-12-10 15:51:42,225 [base_test_case.py-->line:30]:==========充值接口测试结束============
+INFO 2020-12-10 15:51:42,225 [base_test_case.py-->line:24]:==========提现接口测试开始============
+INFO 2020-12-10 15:51:44,087 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15880282720', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:51:44,087 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15880282720', 'pwd': '12345678'}
+INFO 2020-12-10 15:51:45,199 [fixture.py-->line:69]:给用户1770220199充值500000
+INFO 2020-12-10 15:51:45,248 [fixture.py-->line:69]:给用户1770220199充值3000
+INFO 2020-12-10 15:51:45,291 [test04_withdraw.py-->line:41]:开始测试：提现成功-整数
+INFO 2020-12-10 15:51:45,309 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,369 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,432 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220199 and             amount=888 and pay_member_money=502112.00
+INFO 2020-12-10 15:51:45,432 [test04_withdraw.py-->line:41]:开始测试：提现成功-1位小数
+INFO 2020-12-10 15:51:45,450 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,514 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,577 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220199 and             amount=888.8 and pay_member_money=501223.20
+INFO 2020-12-10 15:51:45,577 [test04_withdraw.py-->line:41]:开始测试：提现成功-2位小数
+INFO 2020-12-10 15:51:45,594 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,675 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,742 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220199 and             amount=888.88 and pay_member_money=500334.32
+INFO 2020-12-10 15:51:45,742 [test04_withdraw.py-->line:41]:开始测试：提现成功50万
+INFO 2020-12-10 15:51:45,759 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,837 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770220199
+INFO 2020-12-10 15:51:45,897 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770220199 and             amount=500000 and pay_member_money=334.32
+INFO 2020-12-10 15:51:45,898 [test04_withdraw.py-->line:41]:开始测试：提现金额大于余额
+INFO 2020-12-10 15:51:45,936 [test04_withdraw.py-->line:41]:开始测试：提现金额大于50万
+ERROR 2020-12-10 15:51:45,973 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-10 15:51:45,973 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220199', 'amount': 500001}
+WARNING 2020-12-10 15:51:45,974 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:51:45,974 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-10 15:51:45,974 [test04_withdraw.py-->line:41]:开始测试：提现金额-3位小数
+INFO 2020-12-10 15:51:46,010 [test04_withdraw.py-->line:41]:开始测试：提现金额为负数
+ERROR 2020-12-10 15:51:46,049 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-10 15:51:46,049 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220199', 'amount': -1}
+WARNING 2020-12-10 15:51:46,049 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:51:46,049 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-10 15:51:46,050 [test04_withdraw.py-->line:41]:开始测试：提现金额为0
+ERROR 2020-12-10 15:51:46,093 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:51:46,094 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770220199', 'amount': 0}
+WARNING 2020-12-10 15:51:46,094 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-10 15:51:46,094 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:51:46,094 [test04_withdraw.py-->line:41]:开始测试：提现金额非数字
+INFO 2020-12-10 15:51:46,134 [test04_withdraw.py-->line:41]:开始测试：提现金额为空
+INFO 2020-12-10 15:51:46,184 [test04_withdraw.py-->line:41]:开始测试：会员id为空
+INFO 2020-12-10 15:51:46,236 [test04_withdraw.py-->line:41]:开始测试：会员id不是当前登陆用户
+INFO 2020-12-10 15:51:46,275 [test04_withdraw.py-->line:41]:开始测试：会员id为数值
+ERROR 2020-12-10 15:51:46,334 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:51:46,335 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770220199, 'amount': 0.1}
+WARNING 2020-12-10 15:51:46,335 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-10 15:51:46,335 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-10 15:51:46,335 [base_test_case.py-->line:30]:==========提现接口测试结束============
+INFO 2020-12-10 15:51:46,335 [base_test_case.py-->line:24]:==========创建项目接口测试开始============
+INFO 2020-12-10 15:51:48,137 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15844810833', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:51:48,138 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15844810833', 'pwd': '12345678'}
+INFO 2020-12-10 15:51:49,334 [test05_add_loan.py-->line:40]:开始测试：加标成功
+WARNING 2020-12-10 15:51:49,334 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,396 [test05_add_loan.py-->line:73]:查询loan表中是否增加一个标：select id from loan where id=14340 and member_id=1770220200 and title="借钱实现财富自由"             and amount=2000 and loan_rate=12.0 and loan_term=3 and             loan_date_type=1 and bidding_days=5
+INFO 2020-12-10 15:51:49,396 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id为空
+WARNING 2020-12-10 15:51:49,396 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,440 [test05_add_loan.py-->line:40]:开始测试：加标失败—标题为空
+WARNING 2020-12-10 15:51:49,440 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,493 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为空
+WARNING 2020-12-10 15:51:49,493 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,532 [test05_add_loan.py-->line:40]:开始测试：加标失败—年利率为空
+WARNING 2020-12-10 15:51:49,532 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,569 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限为空
+WARNING 2020-12-10 15:51:49,569 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,621 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限类型为空
+WARNING 2020-12-10 15:51:49,621 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,673 [test05_add_loan.py-->line:40]:开始测试：加标失败—竞标天数为空
+WARNING 2020-12-10 15:51:49,674 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,727 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id不是当前登录用户
+WARNING 2020-12-10 15:51:49,728 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,770 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为负数
+WARNING 2020-12-10 15:51:49,770 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,809 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为小数
+WARNING 2020-12-10 15:51:49,809 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjAyMDAsImV4cCI6MTYwNzU4NzAxMX0.Vte4wjHr2JNt6P6LeZ-zk8_F7uSyW6OFVwEhYBymWE1jZmuldm0sCs4LqDL0d25ZYkZ9Iwyb0BETcSbxSfIIpA
+INFO 2020-12-10 15:51:49,863 [base_test_case.py-->line:30]:==========创建项目接口测试结束============
+INFO 2020-12-10 15:51:49,863 [base_test_case.py-->line:24]:==========审核项目接口测试开始============
+INFO 2020-12-10 15:51:51,655 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15863322611', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-10 15:51:51,655 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15863322611', 'pwd': '12345678'}
+INFO 2020-12-10 15:51:54,932 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15866636704', 'pwd': '12345678', 'type': 0}
+INFO 2020-12-10 15:51:54,932 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15866636704', 'pwd': '12345678'}
+INFO 2020-12-10 15:51:56,329 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:56,377 [test06_audit.py-->line:57]:开始测试：审核成功-通过
+INFO 2020-12-10 15:51:56,437 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=14341 and status=2
+INFO 2020-12-10 15:51:56,437 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:56,481 [test06_audit.py-->line:57]:开始测试：审核成功-不通过
+INFO 2020-12-10 15:51:56,555 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=14342 and status=5
+INFO 2020-12-10 15:51:56,556 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:56,611 [test06_audit.py-->line:57]:开始测试：项目id为空
+INFO 2020-12-10 15:51:56,662 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:56,719 [test06_audit.py-->line:57]:开始测试：项目id不是整数
+ERROR 2020-12-10 15:51:56,774 [test06_audit.py-->line:76]:项目id不是整数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test06_audit.py", line 74, in test_audit
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数值参数格式不正确'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数值参数格式不正确'}
+?          ^          ^^^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-10 15:51:56,775 [test06_audit.py-->line:77]:请求数据是: {'loan_id': '14344', 'approved_or_not': True}
+WARNING 2020-12-10 15:51:56,775 [test06_audit.py-->line:78]:期望结果是：{'code': 2, 'msg': '数值参数格式不正确'}
+WARNING 2020-12-10 15:51:56,775 [test06_audit.py-->line:79]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-10 15:51:56,775 [test06_audit.py-->line:80]:响应回的数据是：{'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-10 15:51:56,775 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:56,818 [test06_audit.py-->line:57]:开始测试：不存在的项目id
+INFO 2020-12-10 15:51:56,872 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:56,915 [test06_audit.py-->line:57]:开始测试：审核状态不是布尔值
+INFO 2020-12-10 15:51:56,951 [fixture.py-->line:87]:用户1770220202加标借钱5000
+INFO 2020-12-10 15:51:57,007 [test06_audit.py-->line:57]:开始测试：审核状态不存在
+INFO 2020-12-10 15:51:57,045 [base_test_case.py-->line:30]:==========审核项目接口测试结束============
+INFO 2020-12-10 15:51:57,045 [base_test_case.py-->line:24]:==========投资接口测试开始============
+INFO 2020-12-10 15:52:00,249 [test07_invest.py-->line:33]:开始测试：前置条件-注册普通用户
+INFO 2020-12-10 15:52:01,172 [test07_invest.py-->line:33]:开始测试：前置条件-登陆普通用户
+INFO 2020-12-10 15:52:01,425 [test07_invest.py-->line:33]:开始测试：前置条件-创建项目
+INFO 2020-12-10 15:52:01,468 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户1
+INFO 2020-12-10 15:52:01,717 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户1
+INFO 2020-12-10 15:52:01,944 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户1充值
+INFO 2020-12-10 15:52:02,008 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户2
+INFO 2020-12-10 15:52:02,244 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户2
+INFO 2020-12-10 15:52:02,488 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户2充值
+INFO 2020-12-10 15:52:02,536 [test07_invest.py-->line:33]:开始测试：前置条件-注册管理员用户
+INFO 2020-12-10 15:52:02,778 [test07_invest.py-->line:33]:开始测试：前置条件-登陆管理员用户
+INFO 2020-12-10 15:52:02,966 [test07_invest.py-->line:33]:开始测试：投资项目不是竞标中状态
+INFO 2020-12-10 15:52:03,021 [test07_invest.py-->line:33]:开始测试：前置条件-审核项目
+INFO 2020-12-10 15:52:03,065 [test07_invest.py-->line:33]:开始测试：用户id为空
+INFO 2020-12-10 15:52:03,103 [test07_invest.py-->line:33]:开始测试：投资金额为空
+INFO 2020-12-10 15:52:03,155 [test07_invest.py-->line:33]:开始测试：投资金额为不能被100整除的数
+INFO 2020-12-10 15:52:03,191 [test07_invest.py-->line:33]:开始测试：投资成功
+INFO 2020-12-10 15:52:03,208 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770220207
+INFO 2020-12-10 15:52:03,294 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770220207
+INFO 2020-12-10 15:52:03,295 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770220207 and loan_id=14349 and amount=5000                         and is_valid=1
+INFO 2020-12-10 15:52:03,340 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770220207 and amount=5000 and             pay_member_money=0.00 and status=1
+INFO 2020-12-10 15:52:03,376 [test07_invest.py-->line:33]:开始测试：投资金额大于项目剩余可投金额
+INFO 2020-12-10 15:52:03,415 [test07_invest.py-->line:33]:开始测试：投资成功并满标
+INFO 2020-12-10 15:52:03,433 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770220208
+INFO 2020-12-10 15:52:03,514 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770220208
+INFO 2020-12-10 15:52:03,514 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770220208 and loan_id=14349 and amount=5000                         and is_valid=1
+INFO 2020-12-10 15:52:03,564 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770220208 and amount=5000 and             pay_member_money=100.00 and status=1
+INFO 2020-12-10 15:52:03,600 [test07_invest.py-->line:116]:满标了
+INFO 2020-12-10 15:52:03,654 [test07_invest.py-->line:33]:开始测试：投资金额大于可用余额
+ERROR 2020-12-10 15:52:03,697 [test07_invest.py-->line:63]:投资金额大于可用余额::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test07_invest.py", line 61, in test_invest
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额不足'} != {'code': 2, 'msg': '该项目不在竞标中状态'}
+- {'code': 2, 'msg': '余额不足'}
+?                     ^^ ^
+
++ {'code': 2, 'msg': '该项目不在竞标中状态'}
+?                     ^^^ ^^^^^^
+
+WARNING 2020-12-10 15:52:03,697 [test07_invest.py-->line:64]:请求数据是: {'member_id': 1770220207, 'loan_id': 14349, 'amount': 5100}
+WARNING 2020-12-10 15:52:03,697 [test07_invest.py-->line:65]:期望结果是：{'code': 2, 'msg': '余额不足'}
+WARNING 2020-12-10 15:52:03,697 [test07_invest.py-->line:66]:实际结果是：{'code': 2, 'msg': '该项目不在竞标中状态'}
+WARNING 2020-12-10 15:52:03,697 [test07_invest.py-->line:67]:响应回的数据是：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-10 15:52:03,698 [base_test_case.py-->line:30]:==========投资接口测试结束============
+INFO 2020-12-11 16:14:25,690 [base_test_case.py-->line:24]:==========注册接口测试开始============
+INFO 2020-12-11 16:14:25,820 [test01_register.py-->line:29]:生成手机号码:15866540177
+INFO 2020-12-11 16:14:26,072 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15866540177' and `type`=1;
+INFO 2020-12-11 16:14:26,359 [test01_register.py-->line:29]:生成手机号码:15808554723
+INFO 2020-12-11 16:14:26,613 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15808554723' and `type`=0 and reg_name="美丽可爱的小简";
+INFO 2020-12-11 16:14:26,895 [test01_register.py-->line:29]:生成手机号码:15869060748
+INFO 2020-12-11 16:14:27,139 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15869060748' and `type`=1;
+INFO 2020-12-11 16:14:27,988 [base_test_case.py-->line:30]:==========注册接口测试结束============
+INFO 2020-12-11 16:14:27,988 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-11 16:14:28,374 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15806587262', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 16:14:28,374 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15806587262', 'pwd': '12345678'}
+INFO 2020-12-11 16:14:28,611 [test03_recharge.py-->line:42]:开始测试：充值成功-整数
+INFO 2020-12-11 16:14:28,631 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 16:14:28,709 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 16:14:28,753 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770221855 and amount=888 and income_member_money=888.00
+INFO 2020-12-11 16:14:28,753 [test03_recharge.py-->line:42]:开始测试：充值成功-1位小数
+INFO 2020-12-11 16:14:28,806 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 16:14:28,890 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 16:14:28,923 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770221855 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-11 16:14:28,923 [test03_recharge.py-->line:42]:开始测试：充值成功-2位小数
+INFO 2020-12-11 16:14:28,944 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 16:14:29,033 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 16:14:29,068 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770221855 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-11 16:14:29,068 [test03_recharge.py-->line:42]:开始测试：充值成功-50万
+INFO 2020-12-11 16:14:29,088 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 16:14:30,176 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 16:14:30,212 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770221855 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-11 16:14:30,213 [test03_recharge.py-->line:42]:开始测试：会员id位空
+INFO 2020-12-11 16:14:30,260 [test03_recharge.py-->line:42]:开始测试：id不是当前登陆的用户
+INFO 2020-12-11 16:14:30,312 [test03_recharge.py-->line:42]:开始测试：会员id为字符串
+ERROR 2020-12-11 16:14:30,366 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 16:14:30,371 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770221855', 'amount': 888}
+WARNING 2020-12-11 16:14:30,371 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-11 16:14:30,371 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 16:14:30,372 [test03_recharge.py-->line:42]:开始测试：会员id位小数
+INFO 2020-12-11 16:14:30,421 [test03_recharge.py-->line:42]:开始测试：充值金额为0
+ERROR 2020-12-11 16:14:30,474 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 16:14:30,474 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770221855, 'amount': 0}
+WARNING 2020-12-11 16:14:30,474 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 16:14:30,474 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 16:14:30,475 [test03_recharge.py-->line:42]:开始测试：充值金额为负数
+INFO 2020-12-11 16:14:30,530 [test03_recharge.py-->line:42]:开始测试：充值金额为空
+INFO 2020-12-11 16:14:30,585 [test03_recharge.py-->line:42]:开始测试：充值金额3位小数
+INFO 2020-12-11 16:14:30,627 [test03_recharge.py-->line:42]:开始测试：充值金额大于50万
+INFO 2020-12-11 16:14:30,670 [test03_recharge.py-->line:42]:开始测试：充值金额非数字
+INFO 2020-12-11 16:14:30,715 [base_test_case.py-->line:30]:==========充值接口测试结束============
+INFO 2020-12-11 16:14:30,715 [base_test_case.py-->line:24]:==========提现接口测试开始============
+INFO 2020-12-11 16:14:31,092 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15806000845', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 16:14:31,093 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15806000845', 'pwd': '12345678'}
+INFO 2020-12-11 16:14:31,348 [fixture.py-->line:69]:给用户1770221856充值500000
+INFO 2020-12-11 16:14:31,406 [fixture.py-->line:69]:给用户1770221856充值3000
+INFO 2020-12-11 16:14:31,461 [test04_withdraw.py-->line:41]:开始测试：提现成功-整数
+INFO 2020-12-11 16:14:31,481 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,550 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,582 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770221856 and             amount=888 and pay_member_money=502112.00
+INFO 2020-12-11 16:14:31,583 [test04_withdraw.py-->line:41]:开始测试：提现成功-1位小数
+INFO 2020-12-11 16:14:31,612 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,681 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,713 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770221856 and             amount=888.8 and pay_member_money=501223.20
+INFO 2020-12-11 16:14:31,713 [test04_withdraw.py-->line:41]:开始测试：提现成功-2位小数
+INFO 2020-12-11 16:14:31,732 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,819 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,850 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770221856 and             amount=888.88 and pay_member_money=500334.32
+INFO 2020-12-11 16:14:31,851 [test04_withdraw.py-->line:41]:开始测试：提现成功50万
+INFO 2020-12-11 16:14:31,869 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,946 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770221856
+INFO 2020-12-11 16:14:31,978 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770221856 and             amount=500000 and pay_member_money=334.32
+INFO 2020-12-11 16:14:31,979 [test04_withdraw.py-->line:41]:开始测试：提现金额大于余额
+INFO 2020-12-11 16:14:32,024 [test04_withdraw.py-->line:41]:开始测试：提现金额大于50万
+ERROR 2020-12-11 16:14:32,068 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-11 16:14:32,069 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770221856', 'amount': 500001}
+WARNING 2020-12-11 16:14:32,069 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 16:14:32,069 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-11 16:14:32,070 [test04_withdraw.py-->line:41]:开始测试：提现金额-3位小数
+INFO 2020-12-11 16:14:32,128 [test04_withdraw.py-->line:41]:开始测试：提现金额为负数
+ERROR 2020-12-11 16:14:32,171 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-11 16:14:32,171 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770221856', 'amount': -1}
+WARNING 2020-12-11 16:14:32,171 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 16:14:32,171 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-11 16:14:32,172 [test04_withdraw.py-->line:41]:开始测试：提现金额为0
+ERROR 2020-12-11 16:14:32,233 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 16:14:32,234 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770221856', 'amount': 0}
+WARNING 2020-12-11 16:14:32,234 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 16:14:32,234 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 16:14:32,235 [test04_withdraw.py-->line:41]:开始测试：提现金额非数字
+INFO 2020-12-11 16:14:32,290 [test04_withdraw.py-->line:41]:开始测试：提现金额为空
+INFO 2020-12-11 16:14:32,358 [test04_withdraw.py-->line:41]:开始测试：会员id为空
+INFO 2020-12-11 16:14:32,401 [test04_withdraw.py-->line:41]:开始测试：会员id不是当前登陆用户
+INFO 2020-12-11 16:14:32,458 [test04_withdraw.py-->line:41]:开始测试：会员id为数值
+ERROR 2020-12-11 16:14:32,513 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 16:14:32,514 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770221856, 'amount': 0.1}
+WARNING 2020-12-11 16:14:32,514 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-11 16:14:32,514 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 16:14:32,514 [base_test_case.py-->line:30]:==========提现接口测试结束============
+INFO 2020-12-11 16:14:32,515 [base_test_case.py-->line:24]:==========创建项目接口测试开始============
+INFO 2020-12-11 16:14:32,884 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15889990213', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 16:14:32,884 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15889990213', 'pwd': '12345678'}
+INFO 2020-12-11 16:14:33,119 [test05_add_loan.py-->line:40]:开始测试：加标成功
+WARNING 2020-12-11 16:14:33,119 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,189 [test05_add_loan.py-->line:73]:查询loan表中是否增加一个标：select id from loan where id=15291 and member_id=1770221857 and title="借钱实现财富自由"             and amount=2000 and loan_rate=12.0 and loan_term=3 and             loan_date_type=1 and bidding_days=5
+INFO 2020-12-11 16:14:33,189 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id为空
+WARNING 2020-12-11 16:14:33,190 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,233 [test05_add_loan.py-->line:40]:开始测试：加标失败—标题为空
+WARNING 2020-12-11 16:14:33,233 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,291 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为空
+WARNING 2020-12-11 16:14:33,291 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,351 [test05_add_loan.py-->line:40]:开始测试：加标失败—年利率为空
+WARNING 2020-12-11 16:14:33,351 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,404 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限为空
+WARNING 2020-12-11 16:14:33,404 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,462 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限类型为空
+WARNING 2020-12-11 16:14:33,463 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,530 [test05_add_loan.py-->line:40]:开始测试：加标失败—竞标天数为空
+WARNING 2020-12-11 16:14:33,531 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,573 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id不是当前登录用户
+WARNING 2020-12-11 16:14:33,574 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,619 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为负数
+WARNING 2020-12-11 16:14:33,619 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,674 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为小数
+WARNING 2020-12-11 16:14:33,675 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjE4NTcsImV4cCI6MTYwNzY3NDc3M30.D-xBi64r6b6DjX36wmnJQT-5VaQJ5IK2itY2TBuvdGTjGDJMEjNroGAca1F2zpH1oJ_tikE5TGF3RACanB3ZDw
+INFO 2020-12-11 16:14:33,739 [base_test_case.py-->line:30]:==========创建项目接口测试结束============
+INFO 2020-12-11 16:14:33,739 [base_test_case.py-->line:24]:==========审核项目接口测试开始============
+INFO 2020-12-11 16:14:34,129 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15810670872', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 16:14:34,129 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15810670872', 'pwd': '12345678'}
+INFO 2020-12-11 16:14:34,767 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15874711247', 'pwd': '12345678', 'type': 0}
+INFO 2020-12-11 16:14:34,768 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15874711247', 'pwd': '12345678'}
+INFO 2020-12-11 16:14:35,025 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,077 [test06_audit.py-->line:57]:开始测试：审核成功-通过
+INFO 2020-12-11 16:14:35,145 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=15292 and status=2
+INFO 2020-12-11 16:14:35,145 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,194 [test06_audit.py-->line:57]:开始测试：审核成功-不通过
+INFO 2020-12-11 16:14:35,263 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=15293 and status=5
+INFO 2020-12-11 16:14:35,263 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,326 [test06_audit.py-->line:57]:开始测试：项目id为空
+INFO 2020-12-11 16:14:35,371 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,437 [test06_audit.py-->line:57]:开始测试：项目id不是整数
+ERROR 2020-12-11 16:14:35,490 [test06_audit.py-->line:76]:项目id不是整数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test06_audit.py", line 74, in test_audit
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数值参数格式不正确'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数值参数格式不正确'}
+?          ^          ^^^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 16:14:35,492 [test06_audit.py-->line:77]:请求数据是: {'loan_id': '15295', 'approved_or_not': True}
+WARNING 2020-12-11 16:14:35,492 [test06_audit.py-->line:78]:期望结果是：{'code': 2, 'msg': '数值参数格式不正确'}
+WARNING 2020-12-11 16:14:35,493 [test06_audit.py-->line:79]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 16:14:35,493 [test06_audit.py-->line:80]:响应回的数据是：{'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-11 16:14:35,494 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,550 [test06_audit.py-->line:57]:开始测试：不存在的项目id
+INFO 2020-12-11 16:14:35,596 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,650 [test06_audit.py-->line:57]:开始测试：审核状态不是布尔值
+INFO 2020-12-11 16:14:35,696 [fixture.py-->line:87]:用户1770221858加标借钱5000
+INFO 2020-12-11 16:14:35,749 [test06_audit.py-->line:57]:开始测试：审核状态不存在
+INFO 2020-12-11 16:14:35,810 [base_test_case.py-->line:30]:==========审核项目接口测试结束============
+INFO 2020-12-11 16:14:35,810 [base_test_case.py-->line:24]:==========投资接口测试开始============
+INFO 2020-12-11 16:14:36,338 [test07_invest.py-->line:33]:开始测试：前置条件-注册普通用户
+INFO 2020-12-11 16:14:36,597 [test07_invest.py-->line:33]:开始测试：前置条件-登陆普通用户
+INFO 2020-12-11 16:14:36,860 [test07_invest.py-->line:33]:开始测试：前置条件-创建项目
+INFO 2020-12-11 16:14:36,921 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户1
+INFO 2020-12-11 16:14:37,172 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户1
+INFO 2020-12-11 16:14:37,424 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户1充值
+INFO 2020-12-11 16:14:37,491 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户2
+INFO 2020-12-11 16:14:37,738 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户2
+INFO 2020-12-11 16:14:37,980 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户2充值
+INFO 2020-12-11 16:14:38,029 [test07_invest.py-->line:33]:开始测试：前置条件-注册管理员用户
+INFO 2020-12-11 16:14:38,281 [test07_invest.py-->line:33]:开始测试：前置条件-登陆管理员用户
+INFO 2020-12-11 16:14:38,529 [test07_invest.py-->line:33]:开始测试：投资项目不是竞标中状态
+INFO 2020-12-11 16:14:38,597 [test07_invest.py-->line:33]:开始测试：前置条件-审核项目
+INFO 2020-12-11 16:14:38,648 [test07_invest.py-->line:33]:开始测试：用户id为空
+INFO 2020-12-11 16:14:38,706 [test07_invest.py-->line:33]:开始测试：投资金额为空
+INFO 2020-12-11 16:14:38,764 [test07_invest.py-->line:33]:开始测试：投资金额为不能被100整除的数
+INFO 2020-12-11 16:14:38,816 [test07_invest.py-->line:33]:开始测试：投资成功
+INFO 2020-12-11 16:14:38,834 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770221861
+INFO 2020-12-11 16:14:38,925 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770221861
+INFO 2020-12-11 16:14:38,927 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770221861 and loan_id=15299 and amount=5000                         and is_valid=1
+INFO 2020-12-11 16:14:38,980 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770221861 and amount=5000 and             pay_member_money=0.00 and status=1
+INFO 2020-12-11 16:14:39,018 [test07_invest.py-->line:33]:开始测试：投资金额大于项目剩余可投金额
+INFO 2020-12-11 16:14:39,063 [test07_invest.py-->line:33]:开始测试：投资成功并满标
+INFO 2020-12-11 16:14:39,083 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770221862
+INFO 2020-12-11 16:14:39,184 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770221862
+INFO 2020-12-11 16:14:39,184 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770221862 and loan_id=15299 and amount=5000                         and is_valid=1
+INFO 2020-12-11 16:14:39,239 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770221862 and amount=5000 and             pay_member_money=100.00 and status=1
+INFO 2020-12-11 16:14:39,279 [test07_invest.py-->line:116]:满标了
+INFO 2020-12-11 16:14:39,342 [test07_invest.py-->line:33]:开始测试：投资金额大于可用余额
+ERROR 2020-12-11 16:14:39,400 [test07_invest.py-->line:63]:投资金额大于可用余额::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day28\testcases\test07_invest.py", line 61, in test_invest
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额不足'} != {'code': 2, 'msg': '该项目不在竞标中状态'}
+- {'code': 2, 'msg': '余额不足'}
+?                     ^^ ^
+
++ {'code': 2, 'msg': '该项目不在竞标中状态'}
+?                     ^^^ ^^^^^^
+
+WARNING 2020-12-11 16:14:39,401 [test07_invest.py-->line:64]:请求数据是: {'member_id': 1770221861, 'loan_id': 15299, 'amount': 5100}
+WARNING 2020-12-11 16:14:39,401 [test07_invest.py-->line:65]:期望结果是：{'code': 2, 'msg': '余额不足'}
+WARNING 2020-12-11 16:14:39,401 [test07_invest.py-->line:66]:实际结果是：{'code': 2, 'msg': '该项目不在竞标中状态'}
+WARNING 2020-12-11 16:14:39,402 [test07_invest.py-->line:67]:响应回的数据是：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-11 16:14:39,402 [base_test_case.py-->line:30]:==========投资接口测试结束============
+INFO 2020-12-11 20:03:44,927 [base_test_case.py-->line:24]:==========注册接口测试开始============
+INFO 2020-12-11 20:03:45,057 [test01_register.py-->line:29]:生成手机号码:15862906285
+INFO 2020-12-11 20:03:45,309 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15862906285' and `type`=1;
+INFO 2020-12-11 20:03:45,593 [test01_register.py-->line:29]:生成手机号码:15885203030
+INFO 2020-12-11 20:03:45,835 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15885203030' and `type`=0 and reg_name="美丽可爱的小简";
+INFO 2020-12-11 20:03:46,125 [test01_register.py-->line:29]:生成手机号码:15837422307
+INFO 2020-12-11 20:03:46,363 [test01_register.py-->line:59]:执行的sql是：SELECT id FROM `member` WHERE mobile_phone='15837422307' and `type`=1;
+INFO 2020-12-11 20:03:47,200 [base_test_case.py-->line:30]:==========注册接口测试结束============
+INFO 2020-12-11 20:03:47,200 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-11 20:03:47,576 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15824001851', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 20:03:47,576 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15824001851', 'pwd': '12345678'}
+INFO 2020-12-11 20:03:47,816 [test03_recharge.py-->line:42]:开始测试：充值成功-整数
+INFO 2020-12-11 20:03:47,836 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:03:47,916 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 20:03:47,949 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222411 and amount=888 and income_member_money=888.00
+INFO 2020-12-11 20:03:47,949 [test03_recharge.py-->line:42]:开始测试：充值成功-1位小数
+INFO 2020-12-11 20:03:47,967 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:03:48,051 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 20:03:48,084 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222411 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-11 20:03:48,084 [test03_recharge.py-->line:42]:开始测试：充值成功-2位小数
+INFO 2020-12-11 20:03:48,102 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:03:48,175 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 20:03:48,206 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222411 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-11 20:03:48,207 [test03_recharge.py-->line:42]:开始测试：充值成功-50万
+INFO 2020-12-11 20:03:48,223 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:03:48,292 [test03_recharge.py-->line:77]:查询充值后余额：1
+INFO 2020-12-11 20:03:48,325 [test03_recharge.py-->line:96]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222411 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-11 20:03:48,326 [test03_recharge.py-->line:42]:开始测试：会员id位空
+INFO 2020-12-11 20:03:48,386 [test03_recharge.py-->line:42]:开始测试：id不是当前登陆的用户
+INFO 2020-12-11 20:03:48,422 [test03_recharge.py-->line:42]:开始测试：会员id为字符串
+ERROR 2020-12-11 20:03:48,476 [test03_recharge.py-->line:65]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 20:03:48,481 [test03_recharge.py-->line:66]:请求数据是: {'member_id': '1770222411', 'amount': 888}
+WARNING 2020-12-11 20:03:48,481 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-11 20:03:48,481 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:03:48,482 [test03_recharge.py-->line:42]:开始测试：会员id位小数
+INFO 2020-12-11 20:03:48,537 [test03_recharge.py-->line:42]:开始测试：充值金额为0
+ERROR 2020-12-11 20:03:48,592 [test03_recharge.py-->line:65]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test03_recharge.py", line 63, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 20:03:48,593 [test03_recharge.py-->line:66]:请求数据是: {'member_id': 1770222411, 'amount': 0}
+WARNING 2020-12-11 20:03:48,593 [test03_recharge.py-->line:67]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 20:03:48,593 [test03_recharge.py-->line:68]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:03:48,594 [test03_recharge.py-->line:42]:开始测试：充值金额为负数
+INFO 2020-12-11 20:03:48,646 [test03_recharge.py-->line:42]:开始测试：充值金额为空
+INFO 2020-12-11 20:03:48,684 [test03_recharge.py-->line:42]:开始测试：充值金额3位小数
+INFO 2020-12-11 20:03:48,736 [test03_recharge.py-->line:42]:开始测试：充值金额大于50万
+INFO 2020-12-11 20:03:48,782 [test03_recharge.py-->line:42]:开始测试：充值金额非数字
+INFO 2020-12-11 20:03:48,824 [base_test_case.py-->line:30]:==========充值接口测试结束============
+INFO 2020-12-11 20:03:48,825 [base_test_case.py-->line:24]:==========提现接口测试开始============
+INFO 2020-12-11 20:03:49,216 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15846168781', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 20:03:49,216 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15846168781', 'pwd': '12345678'}
+INFO 2020-12-11 20:03:49,472 [fixture.py-->line:69]:给用户1770222412充值500000
+INFO 2020-12-11 20:03:49,522 [fixture.py-->line:69]:给用户1770222412充值3000
+INFO 2020-12-11 20:03:49,569 [test04_withdraw.py-->line:41]:开始测试：提现成功-整数
+INFO 2020-12-11 20:03:49,587 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:49,652 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:49,684 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770222412 and             amount=888 and pay_member_money=502112.00
+INFO 2020-12-11 20:03:49,685 [test04_withdraw.py-->line:41]:开始测试：提现成功-1位小数
+INFO 2020-12-11 20:03:49,703 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:49,783 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:49,817 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770222412 and             amount=888.8 and pay_member_money=501223.20
+INFO 2020-12-11 20:03:49,817 [test04_withdraw.py-->line:41]:开始测试：提现成功-2位小数
+INFO 2020-12-11 20:03:49,840 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:49,905 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:49,936 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770222412 and             amount=888.88 and pay_member_money=500334.32
+INFO 2020-12-11 20:03:49,936 [test04_withdraw.py-->line:41]:开始测试：提现成功50万
+INFO 2020-12-11 20:03:49,954 [test04_withdraw.py-->line:52]:查询提现前的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:50,023 [test04_withdraw.py-->line:74]:查询提现后的余额：select leave_amount from member where id=1770222412
+INFO 2020-12-11 20:03:50,054 [test04_withdraw.py-->line:95]:查询提现后是否生成了记录: select id from financelog where pay_member_id=1770222412 and             amount=500000 and pay_member_money=334.32
+INFO 2020-12-11 20:03:50,054 [test04_withdraw.py-->line:41]:开始测试：提现金额大于余额
+INFO 2020-12-11 20:03:50,100 [test04_withdraw.py-->line:41]:开始测试：提现金额大于50万
+ERROR 2020-12-11 20:03:50,142 [test04_withdraw.py-->line:61]:提现金额大于50万::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-11 20:03:50,144 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770222412', 'amount': 500001}
+WARNING 2020-12-11 20:03:50,144 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 20:03:50,144 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-11 20:03:50,145 [test04_withdraw.py-->line:41]:开始测试：提现金额-3位小数
+INFO 2020-12-11 20:03:50,184 [test04_withdraw.py-->line:41]:开始测试：提现金额为负数
+ERROR 2020-12-11 20:03:50,224 [test04_withdraw.py-->line:61]:提现金额为负数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+?                                          +
+
+WARNING 2020-12-11 20:03:50,224 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770222412', 'amount': -1}
+WARNING 2020-12-11 20:03:50,224 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 20:03:50,224 [test04_withdraw.py-->line:64]:实际结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+INFO 2020-12-11 20:03:50,225 [test04_withdraw.py-->line:41]:开始测试：提现金额为0
+ERROR 2020-12-11 20:03:50,276 [test04_withdraw.py-->line:61]:提现金额为0::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 20:03:50,277 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': '1770222412', 'amount': 0}
+WARNING 2020-12-11 20:03:50,277 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 20:03:50,277 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:03:50,277 [test04_withdraw.py-->line:41]:开始测试：提现金额非数字
+INFO 2020-12-11 20:03:50,326 [test04_withdraw.py-->line:41]:开始测试：提现金额为空
+INFO 2020-12-11 20:03:50,368 [test04_withdraw.py-->line:41]:开始测试：会员id为空
+INFO 2020-12-11 20:03:50,421 [test04_withdraw.py-->line:41]:开始测试：会员id不是当前登陆用户
+INFO 2020-12-11 20:03:50,487 [test04_withdraw.py-->line:41]:开始测试：会员id为数值
+ERROR 2020-12-11 20:03:50,532 [test04_withdraw.py-->line:61]:会员id为数值::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test04_withdraw.py", line 59, in test_withdraw
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 20:03:50,534 [test04_withdraw.py-->line:62]:请求数据是: {'member_id': 1770222412, 'amount': 0.1}
+WARNING 2020-12-11 20:03:50,534 [test04_withdraw.py-->line:63]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-11 20:03:50,534 [test04_withdraw.py-->line:64]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:03:50,535 [base_test_case.py-->line:30]:==========提现接口测试结束============
+INFO 2020-12-11 20:03:50,535 [base_test_case.py-->line:24]:==========创建项目接口测试开始============
+INFO 2020-12-11 20:03:50,905 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15886975670', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 20:03:50,906 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15886975670', 'pwd': '12345678'}
+INFO 2020-12-11 20:03:51,152 [test05_add_loan.py-->line:40]:开始测试：加标成功
+WARNING 2020-12-11 20:03:51,152 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,219 [test05_add_loan.py-->line:73]:查询loan表中是否增加一个标：select id from loan where id=15892 and member_id=1770222413 and title="借钱实现财富自由"             and amount=2000 and loan_rate=12.0 and loan_term=3 and             loan_date_type=1 and bidding_days=5
+INFO 2020-12-11 20:03:51,219 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id为空
+WARNING 2020-12-11 20:03:51,219 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,257 [test05_add_loan.py-->line:40]:开始测试：加标失败—标题为空
+WARNING 2020-12-11 20:03:51,257 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,308 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为空
+WARNING 2020-12-11 20:03:51,308 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,351 [test05_add_loan.py-->line:40]:开始测试：加标失败—年利率为空
+WARNING 2020-12-11 20:03:51,351 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,405 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限为空
+WARNING 2020-12-11 20:03:51,405 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,461 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款期限类型为空
+WARNING 2020-12-11 20:03:51,461 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,518 [test05_add_loan.py-->line:40]:开始测试：加标失败—竞标天数为空
+WARNING 2020-12-11 20:03:51,518 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,570 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款人id不是当前登录用户
+WARNING 2020-12-11 20:03:51,570 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,627 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为负数
+WARNING 2020-12-11 20:03:51,627 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,679 [test05_add_loan.py-->line:40]:开始测试：加标失败—借款金额为小数
+WARNING 2020-12-11 20:03:51,679 [test05_add_loan.py-->line:52]:发送请求的token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE3NzAyMjI0MTMsImV4cCI6MTYwNzY4ODUzMn0.WlIRZC7MDLb2FPpY9lrUB-ruNTXJkVNNigNzbzTS5919tW3dsBIUNoC8VgsbT4ag6Dcpze5ltYLd4KgieqDvBw
+INFO 2020-12-11 20:03:51,733 [base_test_case.py-->line:30]:==========创建项目接口测试结束============
+INFO 2020-12-11 20:03:51,733 [base_test_case.py-->line:24]:==========审核项目接口测试开始============
+INFO 2020-12-11 20:03:52,112 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15825480368', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 20:03:52,112 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15825480368', 'pwd': '12345678'}
+INFO 2020-12-11 20:03:52,733 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15842589657', 'pwd': '12345678', 'type': 0}
+INFO 2020-12-11 20:03:52,733 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15842589657', 'pwd': '12345678'}
+INFO 2020-12-11 20:03:52,977 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,045 [test06_audit.py-->line:57]:开始测试：审核成功-通过
+INFO 2020-12-11 20:03:53,121 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=15893 and status=2
+INFO 2020-12-11 20:03:53,121 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,166 [test06_audit.py-->line:57]:开始测试：审核成功-不通过
+INFO 2020-12-11 20:03:53,231 [test06_audit.py-->line:88]:查询标状态是否正确：SELECT status FROM loan WHERE id=15894 and status=5
+INFO 2020-12-11 20:03:53,232 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,279 [test06_audit.py-->line:57]:开始测试：项目id为空
+INFO 2020-12-11 20:03:53,317 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,363 [test06_audit.py-->line:57]:开始测试：项目id不是整数
+ERROR 2020-12-11 20:03:53,408 [test06_audit.py-->line:76]:项目id不是整数::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test06_audit.py", line 74, in test_audit
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数值参数格式不正确'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数值参数格式不正确'}
+?          ^          ^^^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 20:03:53,409 [test06_audit.py-->line:77]:请求数据是: {'loan_id': '15896', 'approved_or_not': True}
+WARNING 2020-12-11 20:03:53,409 [test06_audit.py-->line:78]:期望结果是：{'code': 2, 'msg': '数值参数格式不正确'}
+WARNING 2020-12-11 20:03:53,409 [test06_audit.py-->line:79]:实际结果是：{'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 20:03:53,409 [test06_audit.py-->line:80]:响应回的数据是：{'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-11 20:03:53,410 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,456 [test06_audit.py-->line:57]:开始测试：不存在的项目id
+INFO 2020-12-11 20:03:53,499 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,558 [test06_audit.py-->line:57]:开始测试：审核状态不是布尔值
+INFO 2020-12-11 20:03:53,616 [fixture.py-->line:87]:用户1770222414加标借钱5000
+INFO 2020-12-11 20:03:53,663 [test06_audit.py-->line:57]:开始测试：审核状态不存在
+INFO 2020-12-11 20:03:53,716 [base_test_case.py-->line:30]:==========审核项目接口测试结束============
+INFO 2020-12-11 20:03:53,716 [base_test_case.py-->line:24]:==========投资接口测试开始============
+INFO 2020-12-11 20:03:54,230 [test07_invest.py-->line:33]:开始测试：前置条件-注册普通用户
+INFO 2020-12-11 20:03:54,476 [test07_invest.py-->line:33]:开始测试：前置条件-登陆普通用户
+INFO 2020-12-11 20:03:54,725 [test07_invest.py-->line:33]:开始测试：前置条件-创建项目
+INFO 2020-12-11 20:03:54,769 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户1
+INFO 2020-12-11 20:03:55,024 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户1
+INFO 2020-12-11 20:03:55,273 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户1充值
+INFO 2020-12-11 20:03:55,335 [test07_invest.py-->line:33]:开始测试：前置条件-注册投资普通用户2
+INFO 2020-12-11 20:03:55,569 [test07_invest.py-->line:33]:开始测试：前置条件-登录投资普通用户2
+INFO 2020-12-11 20:03:55,808 [test07_invest.py-->line:33]:开始测试：前置条件-投资普通用户2充值
+INFO 2020-12-11 20:03:55,862 [test07_invest.py-->line:33]:开始测试：前置条件-注册管理员用户
+INFO 2020-12-11 20:03:56,103 [test07_invest.py-->line:33]:开始测试：前置条件-登陆管理员用户
+INFO 2020-12-11 20:03:56,358 [test07_invest.py-->line:33]:开始测试：投资项目不是竞标中状态
+INFO 2020-12-11 20:03:56,412 [test07_invest.py-->line:33]:开始测试：前置条件-审核项目
+INFO 2020-12-11 20:03:56,456 [test07_invest.py-->line:33]:开始测试：用户id为空
+INFO 2020-12-11 20:03:56,494 [test07_invest.py-->line:33]:开始测试：投资金额为空
+INFO 2020-12-11 20:03:56,545 [test07_invest.py-->line:33]:开始测试：投资金额为不能被100整除的数
+INFO 2020-12-11 20:03:56,599 [test07_invest.py-->line:33]:开始测试：投资成功
+INFO 2020-12-11 20:03:56,616 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770222417
+INFO 2020-12-11 20:03:56,688 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770222417
+INFO 2020-12-11 20:03:56,688 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770222417 and loan_id=15900 and amount=5000                         and is_valid=1
+INFO 2020-12-11 20:03:56,743 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770222417 and amount=5000 and             pay_member_money=0.00 and status=1
+INFO 2020-12-11 20:03:56,780 [test07_invest.py-->line:33]:开始测试：投资金额大于项目剩余可投金额
+INFO 2020-12-11 20:03:56,825 [test07_invest.py-->line:33]:开始测试：投资成功并满标
+INFO 2020-12-11 20:03:56,843 [test07_invest.py-->line:45]:查询投资前投资者余额：select leave_amount from member where id=1770222418
+INFO 2020-12-11 20:03:56,943 [test07_invest.py-->line:79]:查询投资后余额：select leave_amount from member where id=1770222418
+INFO 2020-12-11 20:03:56,943 [test07_invest.py-->line:91]:查询投资记录是否生成：select id from invest where member_id=1770222418 and loan_id=15900 and amount=5000                         and is_valid=1
+INFO 2020-12-11 20:03:56,995 [test07_invest.py-->line:104]:查询流水记录是否生成:select id from financelog where pay_member_id=1770222418 and amount=5000 and             pay_member_money=100.00 and status=1
+INFO 2020-12-11 20:03:57,032 [test07_invest.py-->line:116]:满标了
+INFO 2020-12-11 20:03:57,089 [test07_invest.py-->line:33]:开始测试：投资金额大于可用余额
+ERROR 2020-12-11 20:03:57,135 [test07_invest.py-->line:63]:投资金额大于可用余额::测试失败
+Traceback (most recent call last):
+  File "D:\project\py34\day29\testcases\test07_invest.py", line 61, in test_invest
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '余额不足'} != {'code': 2, 'msg': '该项目不在竞标中状态'}
+- {'code': 2, 'msg': '余额不足'}
+?                     ^^ ^
+
++ {'code': 2, 'msg': '该项目不在竞标中状态'}
+?                     ^^^ ^^^^^^
+
+WARNING 2020-12-11 20:03:57,136 [test07_invest.py-->line:64]:请求数据是: {'member_id': 1770222417, 'loan_id': 15900, 'amount': 5100}
+WARNING 2020-12-11 20:03:57,136 [test07_invest.py-->line:65]:期望结果是：{'code': 2, 'msg': '余额不足'}
+WARNING 2020-12-11 20:03:57,136 [test07_invest.py-->line:66]:实际结果是：{'code': 2, 'msg': '该项目不在竞标中状态'}
+WARNING 2020-12-11 20:03:57,136 [test07_invest.py-->line:67]:响应回的数据是：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+INFO 2020-12-11 20:03:57,136 [base_test_case.py-->line:30]:==========投资接口测试结束============
+INFO 2020-12-11 20:18:53,760 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-11 20:18:54,129 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15824622068', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 20:18:54,129 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15824622068', 'pwd': '12345678'}
+INFO 2020-12-11 20:18:54,585 [test03_recharge.py-->line:42]:开始测试：充值成功-整数
+INFO 2020-12-11 20:18:54,603 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:18:56,947 [test03_recharge.py-->line:82]:查询充值后余额：1
+INFO 2020-12-11 20:18:56,978 [test03_recharge.py-->line:101]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222421 and amount=888 and income_member_money=888.00
+INFO 2020-12-11 20:18:56,979 [test03_recharge.py-->line:42]:开始测试：充值成功-1位小数
+INFO 2020-12-11 20:18:56,997 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:18:59,368 [test03_recharge.py-->line:82]:查询充值后余额：1
+INFO 2020-12-11 20:18:59,400 [test03_recharge.py-->line:101]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222421 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-11 20:18:59,400 [test03_recharge.py-->line:42]:开始测试：充值成功-2位小数
+INFO 2020-12-11 20:18:59,417 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:19:01,758 [test03_recharge.py-->line:82]:查询充值后余额：1
+INFO 2020-12-11 20:19:01,789 [test03_recharge.py-->line:101]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222421 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-11 20:19:01,789 [test03_recharge.py-->line:42]:开始测试：充值成功-50万
+INFO 2020-12-11 20:19:01,808 [test03_recharge.py-->line:54]:查询充值前余额：1
+INFO 2020-12-11 20:19:04,335 [test03_recharge.py-->line:82]:查询充值后余额：1
+INFO 2020-12-11 20:19:04,365 [test03_recharge.py-->line:101]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222421 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-11 20:19:04,365 [test03_recharge.py-->line:42]:开始测试：会员id位空
+INFO 2020-12-11 20:19:06,629 [test03_recharge.py-->line:42]:开始测试：id不是当前登陆的用户
+INFO 2020-12-11 20:19:08,877 [test03_recharge.py-->line:42]:开始测试：会员id为字符串
+ERROR 2020-12-11 20:19:11,198 [test03_recharge.py-->line:70]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day29/testcases/test03_recharge.py", line 68, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 20:19:11,199 [test03_recharge.py-->line:71]:请求数据是: {'member_id': '1770222421', 'amount': 888}
+WARNING 2020-12-11 20:19:11,200 [test03_recharge.py-->line:72]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-11 20:19:11,200 [test03_recharge.py-->line:73]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:19:11,200 [test03_recharge.py-->line:42]:开始测试：会员id位小数
+INFO 2020-12-11 20:19:13,480 [test03_recharge.py-->line:42]:开始测试：充值金额为0
+ERROR 2020-12-11 20:19:15,820 [test03_recharge.py-->line:70]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day29/testcases/test03_recharge.py", line 68, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 20:19:15,821 [test03_recharge.py-->line:71]:请求数据是: {'member_id': 1770222421, 'amount': 0}
+WARNING 2020-12-11 20:19:15,821 [test03_recharge.py-->line:72]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 20:19:15,821 [test03_recharge.py-->line:73]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:19:15,821 [test03_recharge.py-->line:42]:开始测试：充值金额为负数
+INFO 2020-12-11 20:19:18,111 [test03_recharge.py-->line:42]:开始测试：充值金额为空
+INFO 2020-12-11 20:19:20,419 [test03_recharge.py-->line:42]:开始测试：充值金额3位小数
+INFO 2020-12-11 20:19:23,717 [test03_recharge.py-->line:42]:开始测试：充值金额大于50万
+INFO 2020-12-11 20:19:26,062 [test03_recharge.py-->line:42]:开始测试：充值金额非数字
+INFO 2020-12-11 20:19:28,298 [base_test_case.py-->line:30]:==========充值接口测试结束============
+INFO 2020-12-11 20:25:22,642 [base_test_case.py-->line:24]:==========充值接口测试开始============
+INFO 2020-12-11 20:25:23,013 [fixture.py-->line:26]:注册用户: {'mobile_phone': '15891416889', 'pwd': '12345678', 'type': 1}
+INFO 2020-12-11 20:25:23,013 [fixture.py-->line:45]:登录用户：{'mobile_phone': '15891416889', 'pwd': '12345678'}
+INFO 2020-12-11 20:25:23,266 [test03_recharge.py-->line:43]:开始测试：充值成功-整数
+INFO 2020-12-11 20:25:23,292 [test03_recharge.py-->line:55]:查询充值前余额：1
+INFO 2020-12-11 20:25:23,364 [test03_recharge.py-->line:86]:查询充值后余额：1
+INFO 2020-12-11 20:25:23,402 [test03_recharge.py-->line:105]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222422 and amount=888 and income_member_money=888.00
+INFO 2020-12-11 20:25:23,403 [test03_recharge.py-->line:43]:开始测试：充值成功-1位小数
+INFO 2020-12-11 20:25:23,427 [test03_recharge.py-->line:55]:查询充值前余额：1
+INFO 2020-12-11 20:25:23,513 [test03_recharge.py-->line:86]:查询充值后余额：1
+INFO 2020-12-11 20:25:23,552 [test03_recharge.py-->line:105]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222422 and amount=888.8 and income_member_money=1776.80
+INFO 2020-12-11 20:25:23,552 [test03_recharge.py-->line:43]:开始测试：充值成功-2位小数
+INFO 2020-12-11 20:25:23,578 [test03_recharge.py-->line:55]:查询充值前余额：1
+INFO 2020-12-11 20:25:23,666 [test03_recharge.py-->line:86]:查询充值后余额：1
+INFO 2020-12-11 20:25:23,705 [test03_recharge.py-->line:105]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222422 and amount=888.88 and income_member_money=2665.68
+INFO 2020-12-11 20:25:23,707 [test03_recharge.py-->line:43]:开始测试：充值成功-50万
+INFO 2020-12-11 20:25:23,732 [test03_recharge.py-->line:55]:查询充值前余额：1
+INFO 2020-12-11 20:25:23,805 [test03_recharge.py-->line:86]:查询充值后余额：1
+INFO 2020-12-11 20:25:23,847 [test03_recharge.py-->line:105]:查询充值后是否生成记录: select id from financelog where income_member_id=1770222422 and amount=500000 and income_member_money=502665.68
+INFO 2020-12-11 20:25:23,847 [test03_recharge.py-->line:43]:开始测试：会员id位空
+INFO 2020-12-11 20:25:23,885 [test03_recharge.py-->line:43]:开始测试：id不是当前登陆的用户
+INFO 2020-12-11 20:25:23,936 [test03_recharge.py-->line:43]:开始测试：会员id为字符串
+ERROR 2020-12-11 20:25:23,992 [test03_recharge.py-->line:74]:会员id为字符串::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day29/testcases/test03_recharge.py", line 72, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '数字格式化异常'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '数字格式化异常'}
+?          ^          ^^^^^^^
+
++ {'code': 0, 'msg': 'OK'}
+?          ^          ^^
+
+WARNING 2020-12-11 20:25:23,993 [test03_recharge.py-->line:75]:请求数据是: {'member_id': '1770222422', 'amount': 888}
+WARNING 2020-12-11 20:25:23,994 [test03_recharge.py-->line:76]:期望结果是：{'code': 2, 'msg': '数字格式化异常'}
+WARNING 2020-12-11 20:25:23,994 [test03_recharge.py-->line:77]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:25:23,995 [test03_recharge.py-->line:43]:开始测试：会员id位小数
+INFO 2020-12-11 20:25:24,053 [test03_recharge.py-->line:43]:开始测试：充值金额为0
+ERROR 2020-12-11 20:25:24,099 [test03_recharge.py-->line:74]:充值金额为0::测试失败
+Traceback (most recent call last):
+  File "D:/project/py34/day29/testcases/test03_recharge.py", line 72, in test_recharge
+    self.assertEqual(expect_data, res_data)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\Program Files\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'} != {'code': 0, 'msg': 'OK'}
+- {'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
++ {'code': 0, 'msg': 'OK'}
+WARNING 2020-12-11 20:25:24,100 [test03_recharge.py-->line:75]:请求数据是: {'member_id': 1770222422, 'amount': 0}
+WARNING 2020-12-11 20:25:24,100 [test03_recharge.py-->line:76]:期望结果是：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+WARNING 2020-12-11 20:25:24,100 [test03_recharge.py-->line:77]:实际结果是：{'code': 0, 'msg': 'OK'}
+INFO 2020-12-11 20:25:24,100 [test03_recharge.py-->line:43]:开始测试：充值金额为负数
+INFO 2020-12-11 20:25:24,152 [test03_recharge.py-->line:43]:开始测试：充值金额为空
+INFO 2020-12-11 20:25:24,190 [test03_recharge.py-->line:43]:开始测试：充值金额3位小数
+INFO 2020-12-11 20:25:24,240 [test03_recharge.py-->line:43]:开始测试：充值金额大于50万
+INFO 2020-12-11 20:25:24,282 [test03_recharge.py-->line:43]:开始测试：充值金额非数字
+INFO 2020-12-11 20:25:24,326 [base_test_case.py-->line:30]:==========充值接口测试结束============

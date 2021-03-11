@@ -1,0 +1,20 @@
+1.jenkins使用  工具，
+ - 插件
+    - 换源  http://testingpai.com/article/1604671047314
+    - 中文显示插件
+        - Localization: Chinese (Simplified)
+ - 构建步骤
+    - 就是命令行的执行命令
+ - 构建后步骤
+    - 测试报告
+        - HTML Publisher plugin
+        - jenkins.xml
+            <arguments>-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -Dhudson.model.DirectoryBrowserSupport.CSP= -jar "D:\Program Files\Jenkins\jenkins.war" --httpPort=9090 --webroot="D:\Program Files\Jenkins\war"</arguments>
+            解决报告样式丢失的问题
+    - 邮件配置
+        1. 系统邮件配置
+        2. 安装插件 Email Extension Plugin 并配置
+        3. 在项目中配置
+        配置过程中失败，不要着急，耐心，重新来过
+        4. 邮箱模板
+            - 可用的环境变量
